@@ -5,6 +5,11 @@ Analysis code for "A Programmatic Stage 1 Registered Report of global song-speec
 - [Time interval elicitation](#time-interval-elicitation)
 - [Split the audio](#split-the-audio)
 - F0 elicitation
+- F0 reprocessed (for cleaning and computing pitch stability)
+- Plotting acoustic features
+- Plotting effect size
+- File naming rules
+- Some other useful tools (not necessary)
 
 ## Annotation
 The English audio data is available here: https://osf.io/e4pqv/.
