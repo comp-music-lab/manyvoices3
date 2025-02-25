@@ -8,7 +8,7 @@ Analysis code for "A Programmatic Stage 1 Registered Report of global song-speec
 - F0 reprocessed (for cleaning and computing pitch stability)
 - Plotting acoustic features
 - Plotting effect size
-- File naming rules
+- [File naming rules](#file-naming-rules)
 - Some other useful tools (not necessary)
 
 ## Annotation
@@ -52,3 +52,10 @@ And then combine the audio of the same speaker manually in Praat.
 In the Praat interface, you can follow these steps:
 
 *Select all the audio files you want to combine → Click the **Combine** button on the right panel → Click **Concatenate**.*
+
+## File naming rules
+I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
+
+The naming convention for my files is **language_experiment date_subject number_condition**, for example, English_20240725_6_conv.wav. 
+
+If it's an extracted f0 or time interval file, '_f0' or '_IOI' is added at the end."
