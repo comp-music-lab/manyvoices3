@@ -1,9 +1,9 @@
 # [A Programmatic Stage 1 Registered Report of global song-speech relationships replicating and extending Ozaki et al. (2024) and Savage et al. (2024)](https://doi.org/10.31234/osf.io/c2dba)
 
-## News📰
+## 📰 News
 **- 2025 Feb 27** Our paper is available on PsyArXiv (Savage et al., 2025, https://doi.org/10.31234/osf.io/c2dba)
 
-## Table of Contents
+## 📖 Table of Contents
 - [Annotation](#annotation)
 - [Time interval elicitation](#time-interval-elicitation)
 - [Split the audio](#split-the-audio)
@@ -14,7 +14,7 @@
 - [File naming rules](#file-naming-rules)
 - Some other useful tools (not necessary)
 
-## Annotation
+## 💻 Annotation
 The English audio data is available here: https://osf.io/e4pqv/.
 
 The annotation is divided into two tiers:
@@ -26,7 +26,7 @@ The annotation is divided into two tiers:
 An example of the annotation is shown below in Praat.
 ![image](https://github.com/user-attachments/assets/e64fa003-72e6-42ee-b61d-30c5496b2d95)
 
-## Time interval elicitation
+## ⏰ Time interval elicitation
 You can find this Praat script in the repository under:
 
 *Data -> Tools (elicit intervals and pitch) -> Get_Duration_of_One_Tier.Praat*
@@ -38,7 +38,7 @@ Next, open the script in Praat, modify the input directory to match the folder c
 An example of modifying the run information in Praat script is demonstrated below.
 ![image](https://github.com/user-attachments/assets/fd601a5e-bd91-42ca-8f60-a451ac0206bf)
 
-## Split the audio
+## 🔊 Split the audio
 I splited audio first based on speaker and combined them manually in Praat for future F0 elicitation.
 
 You can find this Praat script in the repository under:
@@ -56,7 +56,7 @@ In the Praat interface, you can follow these steps:
 
 *Select all the audio files you want to combine → Click the **Combine** button on the right panel → Click **Concatenate**.*
 
-## File naming rules
+## 📁 File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
 The naming convention for my files is **language_experiment date_subject number_condition**, for example, English_20240725_6_conv.wav. 
