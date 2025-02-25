@@ -1,8 +1,8 @@
-# manyvoices3
+# [A Programmatic Stage 1 Registered Report of global song-speech relationships replicating and extending Ozaki et al. (2024) and Savage et al. (2024)](#https://doi.org/10.31234/osf.io/c2dba)
 Analysis code for "A Programmatic Stage 1 Registered Report of global song-speech relationships replicating and extending Ozaki et al. (2024) and Savage et al. (2024)" (Savage et al., 2025, https://doi.org/10.31234/osf.io/c2dba)
 
 ## News📰
-**·2025 Feb 27** Our paper is available on PsyArXiv (Savage et al., 2025, https://doi.org/10.31234/osf.io/c2dba)
+**- 2025 Feb 27** Our paper is available on PsyArXiv (Savage et al., 2025, https://doi.org/10.31234/osf.io/c2dba)
 
 ## Table of Contents
 - [Annotation](#annotation)
