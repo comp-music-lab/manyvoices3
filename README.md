@@ -16,6 +16,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [Compute effect size](#compute-effect-size)
 - [Plotting acoustic features](#plotting-acoustic-features)
 - [Plotting effect size](#plotting-effect-size)
+- Simulation (coming soon)
 
 ## File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
