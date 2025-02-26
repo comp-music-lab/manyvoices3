@@ -103,4 +103,12 @@ We can compute pitch stability based on the files from pitch delete zero using *
 You can **clone this repository** and **run it directly without any modifications**. It will automatically read data from data -> pitch delete zero and save the processed files to data -> pitch processed.
 
 ## Compute effect size
+**Clone this repository**, find ***data-> pitch processed -> effectsize_f0.m***, run it directly. And you will get **f0_cohend_results.csv** and **f0_extra_results.csv**
+
+It should be noticed that you may need to change N=14 in **line 1** based on number of your data pairs
+
+And please keep **exactCI.m** in the **same folder with effectsize_f0.m**. 
+
+The effect size for computing pitch stability and IOI is calculated in the same way. The code and CSV results have been placed in the "pitch processed" and "IOI" folders, respectively.
+
 
