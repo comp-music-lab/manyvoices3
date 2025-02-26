@@ -9,7 +9,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [Time interval elicitation](#time-interval-elicitation)
 - [Split the audio](#split-the-audio)
 - [F0 elicitation](#f0-elicitation)
-- F0 reprocessed (for cleaning and computing pitch stability)
+- [F0 reprocessed](#f0-reprocessed)
 - Plotting acoustic features
 - Plotting effect size
 - [File naming rules](#file-naming-rules)
@@ -73,6 +73,11 @@ input_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined
 output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio f0/"  # Replace with CSV output file path
 ```
 You may also need to modify **lines 41 to 48** if your file naming rules are not consistent with mine.
+
+The elicited F0 is stored under **data -> combined audio f0**
+
+## F0 reprocessed
+
 ## 📁 File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
