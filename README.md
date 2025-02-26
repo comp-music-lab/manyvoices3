@@ -5,7 +5,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 **- 2025 Feb 17.** Our paper is available on PsyArXiv (Savage et al., 2025, https://doi.org/10.31234/osf.io/c2dba)
 
 ## 📖 Table of Contents
-- [📁 File naming rules](#📁-file-naming-rules)
+- [File naming rules](#file-naming-rules)
 - [Annotation](#annotation)
 - [Time interval elicitation](#time-interval-elicitation)
 - [Split the audio](#split-the-audio)
@@ -15,7 +15,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - Plotting effect size
 - Some other useful tools (not necessary)
 
-## 📁 File naming rules
+## File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
 The naming convention for my files is ***language_experiment date_subject number_condition***, for example, ***English_20240725_6_conv.wav***. 
