@@ -39,6 +39,10 @@ Next, open the script in Praat, modify the input directory to match the folder c
 An example of modifying the run information in Praat script is demonstrated below.
 ![image](https://github.com/user-attachments/assets/fd601a5e-bd91-42ca-8f60-a451ac0206bf)
 
+Since this is a combined file, you may need to split it based on speaker and condition as single file. At this time, you can refer to:
+
+*Tools (elicit intervals and pitch) -> time_generator.py*
+
 ## 🔊 Split the audio
 I splited audio first based on speaker and combined them manually in Praat for future F0 elicitation.
 
@@ -61,7 +65,7 @@ PS. You may need to cut the overlap or slience manully when combing audios.
 
 Praat script of merging audios of same speakers will come soon.
 
-## F0 elicitation
+## 🧪 F0 elicitation
 F0 is extracted based on the pYIN algorithm, estimating one f0 point every 0.005 seconds. 
 
 You can find this Python tool under ***Tools (elicit intervals and pitch) → f0_pYIN.py***.  
@@ -76,8 +80,12 @@ You may also need to modify **lines 41 to 48** if your file naming rules are not
 
 The elicited F0 is stored under **data -> combined audio f0**
 
-## F0 reprocessed
+## 💻 F0 reprocessed
+This step is for cleaning NaN in _f0.csv and computing pitch stability, which uses wavelet-based method to obtain the derivation of f0 contour. 
 
+Regarding cleaning NaN, you can find the Python tool under ***Tools (elicit intervals and pitch) → pitch delete zero.py***.
+
+For computing 
 ## 📁 File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
