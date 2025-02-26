@@ -117,6 +117,7 @@ And I dragged all the generated effect size results to ***data -> effectsize*** 
 
 ## Plotting acoustic features
 Run **plot_acoustic features.R**, three points need to be modified：
+
 (1) Line 8: Modify the path to the location where the ***pitch processed folder*** is stored on your local computer.
 ```R
 folder_path <- "/Users/betty/Desktop/manyvoices3/data/pitch processed/" 
