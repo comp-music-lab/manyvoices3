@@ -8,7 +8,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [Annotation](#annotation)
 - [Time interval elicitation](#time-interval-elicitation)
 - [Split the audio](#split-the-audio)
-- F0 elicitation
+- [F0 elicitation](#f0-elicitation)
 - F0 reprocessed (for cleaning and computing pitch stability)
 - Plotting acoustic features
 - Plotting effect size
@@ -30,7 +30,7 @@ An example of the annotation is shown below in Praat.
 ## ⏰ Time interval elicitation
 You can find this Praat script in the repository under:
 
-*Data -> Tools (elicit intervals and pitch) -> Get_Duration_of_One_Tier.Praat*
+*Tools (elicit intervals and pitch) -> Get_Duration_of_One_Tier.Praat*
 
 Drag and drop this script, along with your .wav files and annotated .TextGrid files, into the same folder.
 
@@ -44,7 +44,7 @@ I splited audio first based on speaker and combined them manually in Praat for f
 
 You can find this Praat script in the repository under:
 
-*Data -> Tools (elicit intervals and pitch) -> Split_Long_Sound_Files.Praat*
+*Tools (elicit intervals and pitch) -> Split_Long_Sound_Files.Praat*
 
 Specify three things in this script: a) input directory b) output directory c)tier number: 2
 
@@ -57,6 +57,22 @@ In the Praat interface, you can follow these steps:
 
 *Select all the audio files you want to combine → Click the **Combine** button on the right panel → Click **Concatenate**.*
 
+PS. You may need to cut the overlap or slience manully when combing audios. 
+
+Praat script of merging audios of same speakers will come soon.
+
+## F0 elicitation
+F0 is extracted based on the pYIN algorithm, estimating one f0 point every 0.005 seconds. 
+
+You can find this Python tool under ***Tools (elicit intervals and pitch) → f0_pYIN.py***.  
+
+In this `.py` file, you only need to modify **lines 53 and 54**:  
+```python
+# Set input folder containing audio files and output folder for CSV files
+input_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio/"  # Replace with your audio file path
+output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio f0/"  # Replace with CSV output file path
+```
+You may also need to modify **lines 41 to 48** if your file naming rules are not consistent with mine.
 ## 📁 File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
