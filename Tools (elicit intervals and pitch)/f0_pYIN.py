@@ -22,6 +22,11 @@ def get_f0(audiofilepath, output_folder):
     #### Handle missing values (NaN) ####
     f0[np.isnan(f0)] = 0  # Replace NaN values with 0 to avoid calculation errors
 
+    #### Remove zero-F0 values ####
+    valid_idx = f0 > 0  # Keep only nonzero f0 values
+    f0 = f0[valid_idx]
+    t = t[valid_idx]  # Ensure time aligns with f0
+
     # Compute audio duration
     duration = librosa.get_duration(y=y, sr=sr)
 
@@ -51,7 +56,7 @@ def get_f0(audiofilepath, output_folder):
 if __name__ == "__main__":
     # Set input folder containing audio files and output folder for csv files
     input_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio/"  # Replace with your audio file path
-    output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio f0/"  # Replace with csv output file path
+    output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/pitch delete zero/"  # Replace with csv output file path
 
     # Ensure the output folder exists
     os.makedirs(output_folder, exist_ok=True)
