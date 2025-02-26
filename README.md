@@ -16,7 +16,6 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [Compute effect size](#compute-effect-size)
 - [Plotting acoustic features](#plotting-acoustic-features)
 - Plotting effect size
-- Some other useful tools (not necessary)
 
 ## File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
@@ -44,7 +43,7 @@ You can find this Praat script in the repository under:
 
 Drag and drop this script, along with your .wav files and annotated .TextGrid files, into the same folder.
 
-Next, open the script in Praat, modify the input directory to match the folder containing your audio files, annotations, and the script. Set the tier number to 1 or 2 as needed, and the corresponding .txt file will be generated. 
+Next, open the script in Praat, modify the input directory to match the folder containing your audio files, annotations, and the script. Set the tier number to 1 or 2 as needed, and the corresponding .txt file will be generated. I put it under ***data -> interval_Englishpilot.csv***.
 
 An example of modifying the run information in Praat script is demonstrated below.
 ![image](https://github.com/user-attachments/assets/fd601a5e-bd91-42ca-8f60-a451ac0206bf)
@@ -89,13 +88,13 @@ F0 is extracted based on the pYIN algorithm, estimating one f0 point every 0.005
 
 You can find this Python tool under ***Tools (elicit intervals and pitch) → f0_pYIN.py***.  
 
-In this `.py` file, you only need to modify **lines 53 and 54**:  
+In this `.py` file, you only need to modify **lines 58 and 59**:  
 ```python
 # Set input folder containing audio files and output folder for CSV files
 input_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio/"  # Replace with your audio file path
 output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/pitch delete zero/"  # Replace with CSV output file path
 ```
-You may also need to modify **lines 41 to 48** if your file naming rules are not consistent with mine.
+You may also need to modify **lines 34 to 35** if your file naming rules are not consistent with mine.
 
 The elicited F0 is stored under ***data -> pitch delete zero***
 
@@ -116,3 +115,17 @@ The effect size for computing pitch stability and IOI is calculated in the same 
 And I dragged all the generated effect size results to ***data -> effectsize*** folder for future plotting.
 
 ## Plotting acoustic features
+Run **plot_acoustic features.R**, 有三处需要修改：
+(1) Line 8: Modify the path to the location where the ***pitch processed folder*** is stored on your local computer.
+```R
+folder_path <- "/Users/betty/Desktop/manyvoices3/data/pitch processed/" 
+```
+（2） Line 93: Modify the path to the location where ***interval_Englishpilot.csv*** is stored on your local computer.
+```R
+# Set the path where the interval file is located
+data4 <- read.csv("/Users/betty/Desktop/manyvoices3/data/interval_Englishpilot.csv")
+```
+（3）Line 143: Modify the path to the location where you want to save the images on your local computer.
+```R
+ggsave("/Users/betty/Desktop/manyvoices3/data/combined_plot_acoustic features_English.png", plot = combined_plot, width = 12, height = 6)
+```
