@@ -15,7 +15,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [F0 reprocessed](#f0-reprocessed)
 - [Compute effect size](#compute-effect-size)
 - [Plotting acoustic features](#plotting-acoustic-features)
-- Plotting effect size
+- [Plotting effect size](#plotting-effect-size)
 
 ## File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
@@ -115,7 +115,7 @@ The effect size for computing pitch stability and IOI is calculated in the same 
 And I dragged all the generated effect size results to ***data -> effectsize*** folder for future plotting.
 
 ## Plotting acoustic features
-Run **plot_acoustic features.R**, 有三处需要修改：
+Run **plot_acoustic features.R**, three points need to be modified：
 (1) Line 8: Modify the path to the location where the ***pitch processed folder*** is stored on your local computer.
 ```R
 folder_path <- "/Users/betty/Desktop/manyvoices3/data/pitch processed/" 
@@ -128,4 +128,26 @@ data4 <- read.csv("/Users/betty/Desktop/manyvoices3/data/interval_Englishpilot.c
 （3）Line 143: Modify the path to the location where you want to save the images on your local computer.
 ```R
 ggsave("/Users/betty/Desktop/manyvoices3/data/combined_plot_acoustic features_English.png", plot = combined_plot, width = 12, height = 6)
+```
+## Plotting effect size
+Run ***plot_cohend.R***, change the file paths from **line 7 to line 23** to the corresponding locations where the files are stored on your local computer.
+```R
+effectsize_f0 <- read_csv("./f0_cohend_results.csv") %>%
+  mutate(Feature = "Pitch Height")
+effectsize_f0stab <- read_csv("./f0stab_cohend_results.csv") %>%
+  mutate(Feature = "Pitch Stability")
+effectsize_IOI <- read_csv("./IOI_cohend_results.csv") %>%
+  mutate(Feature = "IOI Rate")
+
+combined_data <- bind_rows(effectsize_f0, effectsize_f0stab, effectsize_IOI)
+cohen_data <- combined_data %>%
+  select(Feature, Cohens_d)
+print(cohen_data)
+
+CI_f0 <- read_csv("./f0_extra_results.csv") %>%
+  mutate(Feature = "Pitch Height")
+CI_f0stab <- read_csv("./f0stab_extra_results.csv") %>%
+  mutate(Feature = "Pitch Stability")
+CI_IOI <- read_csv("./IOI_extra_results.csv") %>%
+  mutate(Feature = "IOI Rate")
 ```
