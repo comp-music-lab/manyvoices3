@@ -41,7 +41,7 @@ An example of modifying the run information in Praat script is demonstrated belo
 
 Since this is a combined file, you may need to split it based on speaker and condition as single file. At this time, you can refer to:
 
-*Tools (elicit intervals and pitch) -> time_generator.py*
+***Tools (elicit intervals and pitch) -> time_generator.py***
 
 ## 🔊 Split the audio
 I splited audio first based on speaker and combined them manually in Praat for future F0 elicitation.
