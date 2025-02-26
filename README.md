@@ -15,14 +15,14 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - Plotting effect size
 - Some other useful tools (not necessary)
 
-## File naming rules 📃
+## File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
 The naming convention for my files is ***language_experiment date_subject number_condition***, for example, ***English_20240725_6_conv.wav***. 
 
 If it's an extracted f0 or time interval file, '_f0' or '_IOI' is added at the end.
 
-## 💻 Annotation
+## Annotation
 The English audio data is available here: https://osf.io/e4pqv/.
 
 The annotation is divided into two tiers:
@@ -34,7 +34,7 @@ The annotation is divided into two tiers:
 An example of the annotation is shown below in Praat.
 ![image](https://github.com/user-attachments/assets/e64fa003-72e6-42ee-b61d-30c5496b2d95)
 
-## ⏰ Time interval elicitation
+## Time interval elicitation
 You can find this Praat script in the repository under:
 
 ***Tools (elicit intervals and pitch) -> Get_Duration_of_One_Tier.Praat***
@@ -59,7 +59,7 @@ And you can just modify line 49-51 in this .py
 
 The elicited intervals of each speaker is stored under ***data -> IOI***
 
-## 🔊 Split the audio
+## Split the audio
 I splited audio first based on speaker and combined them manually in Praat for future F0 elicitation.
 
 You can find this Praat script in the repository under:
@@ -81,7 +81,7 @@ PS. You may need to cut the overlap or slience manully when combing audios.
 
 Praat script of merging audios of same speakers will **come soon**.
 
-## 🧪 F0 elicitation
+## F0 elicitation
 F0 is extracted based on the pYIN algorithm, estimating one f0 point every 0.005 seconds. 
 
 You can find this Python tool under ***Tools (elicit intervals and pitch) → f0_pYIN.py***.  
@@ -96,10 +96,18 @@ You may also need to modify **lines 41 to 48** if your file naming rules are not
 
 The elicited F0 is stored under ***data -> combined audio f0***
 
-## 💻 F0 reprocessed
+## F0 reprocessed
 This step is for cleaning NaN in _f0.csv and computing pitch stability, which uses wavelet-based method to obtain the derivation of f0 contour. 
 
 Regarding cleaning NaN, you can find the Python tool under ***Tools (elicit intervals and pitch) → pitch delete zero.py***.
 
-For computing 
+You need to modify line5-6. 
+```python
+#Define folder paths
+input_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio f0/"  # Source folder
+output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/pitch delete zero/"  # Target folder
+```
+And then we can compute pitch stability based on the files from pitch delete zero using **ft_deltaf0.m**
+
+You can **clone this repository** and **run it directly without any modifications**. It will automatically read data from data -> pitch delete zero and save the processed files to data -> pitch delete zero processed.
 
