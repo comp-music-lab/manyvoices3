@@ -91,26 +91,16 @@ In this `.py` file, you only need to modify **lines 53 and 54**:
 ```python
 # Set input folder containing audio files and output folder for CSV files
 input_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio/"  # Replace with your audio file path
-output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio f0/"  # Replace with CSV output file path
+output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/pitch delete zero/"  # Replace with CSV output file path
 ```
 You may also need to modify **lines 41 to 48** if your file naming rules are not consistent with mine.
 
-The elicited F0 is stored under ***data -> combined audio f0***
+The elicited F0 is stored under ***data -> pitch delete zero***
 
 ## F0 reprocessed
-This step is for cleaning NaN in _f0.csv and computing pitch stability, which uses wavelet-based method to obtain the derivation of f0 contour. 
+We can compute pitch stability based on the files from pitch delete zero using **ft_deltaf0.m**
 
-Regarding cleaning NaN, you can find the Python tool under ***Tools (elicit intervals and pitch) → pitch delete zero.py***.
-
-You need to modify line5-6. 
-```python
-#Define folder paths
-input_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio f0/"  # Source folder
-output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/pitch delete zero/"  # Target folder
-```
-And then we can compute pitch stability based on the files from pitch delete zero using **ft_deltaf0.m**
-
-You can **clone this repository** and **run it directly without any modifications**. It will automatically read data from data -> pitch delete zero and save the processed files to data -> pitch delete zero processed.
+You can **clone this repository** and **run it directly without any modifications**. It will automatically read data from data -> pitch delete zero and save the processed files to data -> pitch processed.
 
 ## Compute effect size
 
