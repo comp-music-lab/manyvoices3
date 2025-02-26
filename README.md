@@ -4,6 +4,8 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 ## 📰 News
 **- 2025 Feb 17.** Our paper is available on PsyArXiv (Savage et al., 2025, https://doi.org/10.31234/osf.io/c2dba)
 
+## 🐰 Flowchart (Coming soon)
+
 ## 📖 Table of Contents
 - [File naming rules](#file-naming-rules)
 - [Annotation](#annotation)
@@ -12,7 +14,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [F0 elicitation](#f0-elicitation)
 - [F0 reprocessed](#f0-reprocessed)
 - [Compute effect size](#compute-effect-size)
-- Plotting acoustic features
+- [Plotting acoustic features](#plotting-acoustic-features)
 - Plotting effect size
 - Some other useful tools (not necessary)
 
@@ -113,3 +115,4 @@ The effect size for computing pitch stability and IOI is calculated in the same 
 
 And I dragged all the generated effect size results to ***data -> effectsize*** folder for future plotting.
 
+## Plotting acoustic features
