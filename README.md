@@ -111,4 +111,5 @@ And please keep **exactCI.m** in the **same folder with effectsize_f0.m**.
 
 The effect size for computing pitch stability and IOI is calculated in the same way. The code and CSV results have been placed in the "pitch processed" and "IOI" folders, respectively.
 
+And I dragged all the generated effect size results to ***data -> effectsize*** folder for future plotting.
 
