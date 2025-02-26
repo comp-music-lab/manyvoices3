@@ -43,6 +43,13 @@ Since this is a combined file, you may need to split it based on speaker and con
 
 ***Tools (elicit intervals and pitch) -> time_generator.py***
 
+And you can just modify line 49-51 in this .py
+```python
+    # Set input csv path and output folder
+    input_csv_file = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/IOI/Interval_Englishpilot.csv"  # Your actual CSV file path
+    output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/IOI/"  # Your output directory
+```
+
 ## 🔊 Split the audio
 I splited audio first based on speaker and combined them manually in Praat for future F0 elicitation.
 
