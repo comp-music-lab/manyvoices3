@@ -11,6 +11,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [Split the audio](#split-the-audio)
 - [F0 elicitation](#f0-elicitation)
 - [F0 reprocessed](#f0-reprocessed)
+- [Compute effect size](#compute-effect-size)
 - Plotting acoustic features
 - Plotting effect size
 - Some other useful tools (not necessary)
@@ -110,4 +111,6 @@ output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/pitch d
 And then we can compute pitch stability based on the files from pitch delete zero using **ft_deltaf0.m**
 
 You can **clone this repository** and **run it directly without any modifications**. It will automatically read data from data -> pitch delete zero and save the processed files to data -> pitch delete zero processed.
+
+## Compute effect size
 
