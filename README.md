@@ -5,6 +5,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 **- 2025 Feb 17.** Our paper is available on PsyArXiv (Savage et al., 2025, https://doi.org/10.31234/osf.io/c2dba)
 
 ## 📖 Table of Contents
+- [File naming rules](#file-naming-rules)
 - [Annotation](#annotation)
 - [Time interval elicitation](#time-interval-elicitation)
 - [Split the audio](#split-the-audio)
@@ -12,8 +13,14 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [F0 reprocessed](#f0-reprocessed)
 - Plotting acoustic features
 - Plotting effect size
-- [File naming rules](#file-naming-rules)
 - Some other useful tools (not necessary)
+
+## 📁 File naming rules
+I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
+
+The naming convention for my files is ***language_experiment date_subject number_condition***, for example, ***English_20240725_6_conv.wav***. 
+
+If it's an extracted f0 or time interval file, '_f0' or '_IOI' is added at the end.
 
 ## 💻 Annotation
 The English audio data is available here: https://osf.io/e4pqv/.
@@ -30,7 +37,7 @@ An example of the annotation is shown below in Praat.
 ## ⏰ Time interval elicitation
 You can find this Praat script in the repository under:
 
-*Tools (elicit intervals and pitch) -> Get_Duration_of_One_Tier.Praat*
+***Tools (elicit intervals and pitch) -> Get_Duration_of_One_Tier.Praat***
 
 Drag and drop this script, along with your .wav files and annotated .TextGrid files, into the same folder.
 
@@ -50,12 +57,14 @@ And you can just modify line 49-51 in this .py
     output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/IOI/"  # Your output directory
 ```
 
+The elicited intervals of each speaker is stored under ***data -> IOI***
+
 ## 🔊 Split the audio
 I splited audio first based on speaker and combined them manually in Praat for future F0 elicitation.
 
 You can find this Praat script in the repository under:
 
-*Tools (elicit intervals and pitch) -> Split_Long_Sound_Files.Praat*
+***Tools (elicit intervals and pitch) -> Split_Long_Sound_Files.Praat***
 
 Specify three things in this script: a) input directory b) output directory c)tier number: 2
 
@@ -70,7 +79,7 @@ In the Praat interface, you can follow these steps:
 
 PS. You may need to cut the overlap or slience manully when combing audios. 
 
-Praat script of merging audios of same speakers will come soon.
+Praat script of merging audios of same speakers will **come soon**.
 
 ## 🧪 F0 elicitation
 F0 is extracted based on the pYIN algorithm, estimating one f0 point every 0.005 seconds. 
@@ -85,7 +94,7 @@ output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combine
 ```
 You may also need to modify **lines 41 to 48** if your file naming rules are not consistent with mine.
 
-The elicited F0 is stored under **data -> combined audio f0**
+The elicited F0 is stored under ***data -> combined audio f0***
 
 ## 💻 F0 reprocessed
 This step is for cleaning NaN in _f0.csv and computing pitch stability, which uses wavelet-based method to obtain the derivation of f0 contour. 
@@ -93,9 +102,4 @@ This step is for cleaning NaN in _f0.csv and computing pitch stability, which us
 Regarding cleaning NaN, you can find the Python tool under ***Tools (elicit intervals and pitch) → pitch delete zero.py***.
 
 For computing 
-## 📁 File naming rules
-I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
-The naming convention for my files is **language_experiment date_subject number_condition**, for example, English_20240725_6_conv.wav. 
-
-If it's an extracted f0 or time interval file, '_f0' or '_IOI' is added at the end."
