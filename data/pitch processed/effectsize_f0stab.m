@@ -25,7 +25,7 @@ f0_conv = f0_convfile.f0stab(f0_convfile.f0stab < 0);
     figure(i); histogram(f0_song); hold on; histogram(f0_conv); hold off
 end
 
-[CI, pval, mu_hat] = exactCI(d, sgm, 0.05*3, 0.5);
+[CI, pval, mu_hat] = exactCI(d, sgm, 0.05/3, 0.5);
 
 
 cohensd = sqrt(2)*norminv(d);
