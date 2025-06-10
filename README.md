@@ -18,14 +18,13 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [Compute effect size](#compute-effect-size)
 - [Plotting acoustic features](#plotting-acoustic-features)
 - [Plotting effect size](#plotting-effect-size)
-- Simulation (coming soon)
 
 ## File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
-The naming convention for my files is ***language_experiment date_subject number_condition***, for example, ***English_20240725_6_conv.wav***. 
+There are **two occasions** that require manual file renaming. The first occurs when extracting audio clips corresponding to the conversation and alternate singing conditions from the full recordings for annotation. At this stage, the naming convention should follow the format: ***language_location_group_condition.wav***, for example: ***English_Auckland_C1_conv.wav*** (Here, the group indicates the order of the tasks: C1, R1, or S1 refer to Conversation First, Recitation First, or Singing First, respectively).
 
-If it's an extracted f0 or time interval file, '_f0' or '_IOI' is added at the end.
+The second occurs after extracting speaker segments marked in Tier 2 in Praat. Once these segments have been manually concatenated in Praat, the new files need to be saved and renamed accordingly. At this stage, the naming convention should follow the format: ***language_location_group_gender_speaker_condition.wav***, for example: ***English_Auckland_C1_F_14_conv.wav*** 
 
 ## Annotation
 The English audio data is available here: https://osf.io/e4pqv/.
