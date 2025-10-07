@@ -1,6 +1,6 @@
 N = 14; % Number of data pairs
-d = zeros(14, 1);
-sgm = zeros(14, 1);
+d = zeros(N, 1);
+sgm = zeros(N, 1);
 
 % Retrieve all csv files in the current directory
 files = dir('./*.csv');  % get all csv 
@@ -15,9 +15,9 @@ assert(length(singFiles) == length(convFiles), 'Sing and Conv file counts do not
 
 for i=1:length(singFiles)
     f0_songfile = readtable(singFiles{i});
-    f0_song = f0_songfile.f0(f0_songfile.f0 > 0);
+    f0_song = f0_songfile.f0_cent;
     f0_convfile = readtable(convFiles{i});
-    f0_conv = f0_convfile.f0(f0_convfile.f0 > 0);
+    f0_conv = f0_convfile.f0_cent;
     [d_i, sgm_i] = pb_effectsize(f0_song, f0_conv);
     d(i) = d_i;
     sgm(i) = sgm_i;
@@ -25,7 +25,7 @@ for i=1:length(singFiles)
     figure(i); histogram(f0_song); hold on; histogram(f0_conv); hold off
 end
 
-[CI, pval, mu_hat] = exactCI(d, sgm, 0.05/3, 0.5);
+[CI, pval, mu_hat] = exactCI(d, sgm, 0.05*2, 0.5);
 cohensd = sqrt(2)*norminv(d);
 
 disp("Cohen's d value:")
