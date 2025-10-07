@@ -23,10 +23,8 @@ def process_csv(input_csv, output_folder):
     if not required_columns.issubset(df.columns):
         print("❌ CSV file is missing required columns！")
         return
-
-    # 将 speaker 列的值加上 14
-    # df["speaker"] = df["speaker"] + 14
-
+        
+    df["IOI"] = 1 / df["duration"]
     # Group by speaker and condition
     grouped = df.groupby(["speaker", "condition"])
 
