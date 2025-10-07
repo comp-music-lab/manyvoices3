@@ -65,7 +65,7 @@ reffreq = 440;
 
 f0stab = -abs(df0);
 
-    results = table(time, f0, dt, df0, f0stab, speaker, date, condition);
+    results = table(time, f0, dt, df0, f0_cent, f0stab, speaker, date, condition);
         % Create results table
     output_filename = strrep(file_name, '_f0.csv', '_f0_processed.csv');
     output_path = fullfile(output_folder, output_filename);
