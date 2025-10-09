@@ -25,8 +25,9 @@ CI_IOI <- read_csv("./IOI_extra_results.csv") %>%
 
 combined_data2 <- bind_rows(CI_f0, CI_f0stab, CI_IOI)
 CI_data <- combined_data2 %>%
-  select(Feature, CI_lower, mu_hat)
+  select(Feature, CI_lower, CI_upper, mu_hat)
 CI_data$CI_lower <- sqrt(2) * qnorm(CI_data$CI_lower, 0, 1)
+CI_data$CI_upper <- sqrt(2) * qnorm(CI_data$CI_upper, 0, 1)
 CI_data$mu_hat <- sqrt(2) * qnorm(CI_data$mu_hat, 0, 1)
 print(CI_data)
 
