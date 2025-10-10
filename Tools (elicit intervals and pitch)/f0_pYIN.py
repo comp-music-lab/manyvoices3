@@ -23,7 +23,7 @@ def get_f0(audiofilepath, output_folder):
     f0[np.isnan(f0)] = 0  # Replace NaN values with 0 to avoid calculation errors
 
     #### Remove zero-F0 values ####
-    valid_idx = f0 > 0  # Keep only nonzero f0 values
+    freq_mask = (f0 >= 50) & (f0 <= 600)
     f0 = f0[valid_idx]
     t = t[valid_idx]  # Ensure time aligns with f0
 
