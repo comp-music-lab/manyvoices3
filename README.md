@@ -38,12 +38,13 @@ The English audio data is available here: https://osf.io/e4pqv/.
 
 The annotation is divided into two tiers:
 
-1. First tier (interval): I used letters (a, b, c, ...) to represent speaker-specific units. You can modify them to numbers as needed.
+1. First tier (interval): I labels speaker ID (numbers) among units. 
 
-2. Second tier (speaker): I labeled speakers as s1, s2, s3, etc., corresponding to Speaker 1, Speaker 2, Speaker 3, and so on.
+2. Second tier (speaker): I labeled speakers as 1, 2, 3, etc., corresponding to Speaker 1, Speaker 2, Speaker 3, and so on. Since we have three groups, we may all name participants 1-10 across three groups. To make the participants ID continuous, I may rename the ID. For example, if C1 group have 10 participants with ID from 1-10, for R1 group, I may rename them as 11-20. 
 
 An example of the annotation is shown below in Praat.
-![image](https://github.com/user-attachments/assets/e64fa003-72e6-42ee-b61d-30c5496b2d95)
+![image](https://github.com/user-attachments/assets/89a0fed2-93cc-4eb1-a57e-edb631fd6ee8)
+
 
 ## Time interval elicitation
 You can find this Praat script in the repository under:
