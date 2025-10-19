@@ -29,7 +29,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 ## File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
-The naming convention for my files is ***language_experiment date_subject number_condition***, for example, ***English_20240725_6_conv.wav***. 
+The naming convention for my files is ***language_location_group_condition.wav***, for example, ***Mandarin_Auckland_C1_conv.wav***. 
 
 If it's an extracted f0 or time interval file, '_f0' or '_IOI' is added at the end.
 
