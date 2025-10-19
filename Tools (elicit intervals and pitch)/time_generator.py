@@ -1,55 +1,64 @@
 import os
 import pandas as pd
+import re
 
-
-def process_csv(input_csv, output_folder):
+def process_txt(input_txt, output_folder):
     """
-    Parse the input CSV file and generate new CSV files based on speaker and condition.
-
-    Parameters:
-    - input_csv: str, path to the input CSV file
-    - output_folder: str, path to store the output CSV files
+    Parse the input TXT file, decode fileName, calculate IOI, add gender column,
+    and generate new CSV files grouped by speaker and condition.
     """
-    # Ensure the output folder exists
 
     os.makedirs(output_folder, exist_ok=True)
 
-    # Read the csv file
-    df = pd.read_csv(input_csv, sep=",")  # If comma-separated, use `,`
-    print(df.columns)
+    # === 1. Read the TXT file ===
+    df = pd.read_csv(input_txt, sep=",", header=0)  # Comma-separated, first line as header
+    print("✅ File loaded successfully! Columns:", df.columns.tolist())
 
-    # Ensure required columns exist
-    required_columns = {"language", "date", "condition", "speaker", "duration", "start", "end", "IOI"}
-    if not required_columns.issubset(df.columns):
-        print("❌ CSV file is missing required columns！")
-        return
-        
+    # === 2. Decode 'fileName' to extract metadata ===
+    def decode_filename(fname):
+        base = os.path.basename(fname).replace(".TextGrid", "")
+        # Example: Mandarin_Auckland_C1_conv
+        match = re.match(r"([A-Za-z]+)_([A-Za-z]+)_([A-Za-z0-9]+)_([a-z]+)", base)
+        if match:
+            return pd.Series(match.groups(), index=["language", "location", "group", "condition"])
+        else:
+            return pd.Series(["unknown"] * 4, index=["language", "location", "group", "condition"])
+
+    df[["language", "location", "group", "condition"]] = df["fileName"].apply(decode_filename)
+
+    # === 3. Calculate IOI ===
     df["IOI"] = 1 / df["duration"]
-    # Group by speaker and condition
+
+    # === 4. Add speaker and gender columns ===
+    df["speaker"] = df["IntervalName"].astype(int)
+
+    def assign_gender(speaker_id):
+        male_speakers = {2, 4, 6, 7, 10, 11, 19}  # Modify this set if needed
+        return "Male" if speaker_id in male_speakers else "Female"
+
+    df["gender"] = df["speaker"].apply(assign_gender)
+
+    # === 5. Group by speaker and condition, and save separate CSV files ===
     grouped = df.groupby(["speaker", "condition"])
 
     for (speaker, condition), group_data in grouped:
-        # Retrieve filename info
         language = group_data.iloc[0]["language"]
-        date = group_data.iloc[0]["date"]
+        location = group_data.iloc[0]["location"]
+        group = group_data.iloc[0]["group"]
 
-        # Generate output filename
-        output_filename = f"{language}_{date}_{speaker}_{condition}_IOI.csv"
+        output_filename = f"{language}_{location}_{group}_{speaker}_{condition}_IOI.csv"
         output_filepath = os.path.join(output_folder, output_filename)
 
-        # Save the new CSV
         group_data.to_csv(output_filepath, index=False)
+        print(f"✅ Generated file: {output_filename}")
 
-        print(f"✅ 生成: {output_filename}")
+    print("🎉 All data processing is complete!")
 
 
 if __name__ == "__main__":
-    # Set input csv path and output folder
-    input_csv_file = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/IOI/Interval_Englishpilot.csv"  # Your actual CSV file path
-    output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/IOI/"  # Your output directory
+    # Update the paths accordingly
+    input_txt_file = "/Users/betty/Desktop/manyvoices3_pilot/result_duration_tier_1.txt"
+    output_folder = "/Users/betty/Desktop/manyvoices3_pilot/IOI/"
 
-    # Process CSV
-    process_csv(input_csv_file, output_folder)
-
-    print("🎉 All data processing is complete！")
+    process_txt(input_txt_file, output_folder)
 
