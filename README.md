@@ -53,7 +53,7 @@ You can find this Praat script in the repository under:
 
 Drag and drop this script, along with your .wav files and annotated .TextGrid files, into the same folder.
 
-Next, open the script in Praat, modify the input directory to match the folder containing your audio files, annotations, and the script. Set the tier number to 1 or 2 as needed, and the corresponding .txt file will be generated. I put it under ***data -> interval_Englishpilot.csv***.
+Next, open the script in Praat, modify the input directory to match the folder containing your audio files, annotations, and the script. Set the tier number to 1 or 2 as needed, and the corresponding .txt file will be generated. I put it under ***data -> result_duration_tier_1.txt***.
 
 An example of modifying the run information in Praat script is demonstrated below.
 ![image](https://github.com/user-attachments/assets/fd601a5e-bd91-42ca-8f60-a451ac0206bf)
@@ -62,11 +62,11 @@ Since this is a combined file, you may need to split it based on speaker and con
 
 ***Tools (elicit intervals and pitch) -> time_generator.py***
 
-And you can just modify line 49-51 in this .py
+And you can just modify line 60-61 in this .py
 ```python
-    # Set input csv path and output folder
-    input_csv_file = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/IOI/Interval_Englishpilot.csv"  # Your actual CSV file path
-    output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/IOI/"  # Your output directory
+    # Set input txt path and output folder
+    input_txt_file = "/Users/betty/Desktop/manyvoices3_pilot/result_duration_tier_1.txt""  # Your actual txt file path
+     output_folder = "/Users/betty/Desktop/manyvoices3_pilot/IOI/""  # Your output directory
 ```
 
 The elicited intervals of each speaker is stored under ***data -> IOI***
