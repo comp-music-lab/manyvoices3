@@ -56,7 +56,8 @@ Drag and drop this script, along with your .wav files and annotated .TextGrid fi
 Next, open the script in Praat, modify the input directory to match the folder containing your audio files, annotations, and the script. Set the tier number to 1 or 2 as needed, and the corresponding .txt file will be generated. I put it under ***data -> result_duration_tier_1.txt***.
 
 An example of modifying the run information in Praat script is demonstrated below.
-![image](https://github.com/user-attachments/assets/fd601a5e-bd91-42ca-8f60-a451ac0206bf)
+![image](https://github.com/user-attachments/assets/c52454be-40c7-4716-9255-b9d89d7aa752)
+
 
 Since this is a combined file, you may need to split it based on speaker and condition as single file. At this time, you can refer to:
 
