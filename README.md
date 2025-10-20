@@ -82,17 +82,20 @@ You can find this Praat script in the repository under:
 Specify three things in this script: a) input directory b) output directory c)tier number: 2
 
 An example of modifying the run information in Praat script is demonstrated below. 
-![image](https://github.com/user-attachments/assets/5e115428-5bcc-44b0-97a0-80e10baaf51c)
+![image](https://github.com/user-attachments/assets/07185d2d-2585-4641-a1d7-63cd53880522)
 
-And then combine the audio of the same speaker manually in Praat. 
 
-In the Praat interface, you can follow these steps:
+And then combine the audio of the same speaker using ***Tools (elicit intervals and pitch) -> concatenate.py***
 
-*Select all the audio files you want to combine → Click the **Combine** button on the right panel → Click **Concatenate**.*
+Before running the script, make sure the required packages are installed.
+In your terminal, run the following commands:
 
-PS. You may need to cut the overlap or slience manully when combing audios. 
+、、、
+pip install pydub
+brew install ffmpeg
+、、、
 
-Praat script of merging audios of same speakers will **come soon**.
+These will install pydub (for audio processing) and ffmpeg (for handling audio file formats).
 
 ## F0 elicitation
 F0 is extracted based on the pYIN algorithm, estimating one f0 point every 0.005 seconds. 
