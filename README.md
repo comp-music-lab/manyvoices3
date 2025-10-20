@@ -90,10 +90,10 @@ And then combine the audio of the same speaker using ***Tools (elicit intervals 
 Before running the script, make sure the required packages are installed.
 In your terminal, run the following commands:
 
-、、、
+```terminal
 pip install pydub
 brew install ffmpeg
-、、、
+```
 
 These will install pydub (for audio processing) and ffmpeg (for handling audio file formats).
 
