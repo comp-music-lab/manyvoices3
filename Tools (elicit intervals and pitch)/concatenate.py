@@ -13,7 +13,7 @@ pattern = re.compile(
     r'^([A-Za-z]+)_([A-Za-z]+)_([A-Za-z]\d)_([A-Za-z]+)_([0-9]+)_(\d+)\.wav$'
 )
 
-# Group files by: group + condition + speaker
+# Group files by: language + location + group + gender + speaker + condition
 groups = {}
 
 for f in os.listdir(input_folder):
@@ -21,7 +21,19 @@ for f in os.listdir(input_folder):
         match = pattern.match(f)
         if match:
             language, location, group, condition, speaker, number = match.groups()
-            key = f"{language}_{location}_{group}_{condition}_{speaker}"
+
+            # Convert speaker to int for gender classification
+            speaker_int = int(speaker)
+
+            # Define gender based on speaker number
+            if speaker_int in [2, 4, 6, 7, 10, 11, 19]:
+                gender = 'M'
+            else:
+                gender = 'F'
+
+            # New grouping key format
+            key = f"{language}_{location}_{group}_{gender}_{speaker}_{condition}"
+
             if key not in groups:
                 groups[key] = []
             # Store both path and number for sorting
@@ -42,9 +54,7 @@ for key, file_info in groups.items():
         combined += sound
 
     # Export the combined file
-    out_path = os.path.join(output_folder, f"{key}_combined.wav")
+    out_path = os.path.join(output_folder, f"{key}.wav")
     combined.export(out_path, format="wav")
 
 print("✅ All audio files combined successfully!")
-
-
