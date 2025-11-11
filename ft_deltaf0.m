@@ -3,8 +3,8 @@
 % based on what we elicited to convert f0 as cents and using wavelet-based
 % method to obtain the derivation of f0.
 % Define folder path
-input_folder = './data/pitch delete zero/';
-output_folder = './data/pitch processed/';
+input_folder = './pitch delete zero/';
+output_folder = './pitch processed/';
 
 % Ensure the output folder exists
 if ~exist(output_folder, 'dir')
@@ -20,13 +20,15 @@ for i = 1:length(file_list)
     file_name = file_list(i).name;
     file_path = fullfile(input_folder, file_name);
     datainfofile = readtable(file_path, 'PreserveVariableNames', true);
-% datainfofile = readtable('./data/combined audio f0/Mandarin_013010_s1_conv_f0.csv', 'PreserveVariableNames', true);
+
 time = datainfofile{:,1};
 f0 = datainfofile{:,2};
 language = datainfofile{:,3};
-date = datainfofile{:,4};
-speaker  = datainfofile{:,5};
-condition = datainfofile{:,6};
+location = datainfofile{:,4};
+group  = datainfofile{:,5};
+gender = datainfofile{:,6};
+speaker = datainfofile{:,7};
+condition = datainfofile{:,8};
 dt = diff(time); 
 dt = [dt; NaN]; 
 
@@ -35,7 +37,11 @@ time = time(valid_idx);
 f0 = f0(valid_idx);
 dt = dt(valid_idx);
 speaker = speaker(valid_idx);
-date = date(valid_idx);
+% date = date(valid_idx);
+langauge = language(valid_idx);
+location = location(valid_idx);
+group = group(valid_idx);
+gender = gender(valid_idx);
 condition = condition(valid_idx);
 reffreq = 440;
 
@@ -65,7 +71,26 @@ reffreq = 440;
 
 f0stab = -abs(df0);
 
-    results = table(time, f0, dt, df0, f0_cent, f0stab, speaker, date, condition);
+minlen = min([length(time), length(f0), length(language), ...
+              length(location), length(group), length(gender), ...
+              length(speaker), length(condition), length(dt), ...
+              length(df0), length(f0stab)]);
+
+
+time = time(1:minlen);
+f0 = f0(1:minlen);
+language = language(1:minlen);
+location = location(1:minlen);
+group = group(1:minlen);
+gender = gender(1:minlen);
+speaker = speaker(1:minlen);
+condition = condition(1:minlen);
+f0_cent = f0_cent(1:minlen);
+dt = dt(1:minlen);
+df0 = df0(1:minlen);
+f0stab = f0stab(1:minlen);
+
+    results = table(time, f0, language, location, group, gender, speaker, condition, f0_cent, dt, df0, f0stab);
         % Create results table
     output_filename = strrep(file_name, '_f0.csv', '_f0_processed.csv');
     output_path = fullfile(output_folder, output_filename);
