@@ -127,7 +127,8 @@ The elicited F0 is stored under ***data -> pitch delete zero***
 ## F0 reprocessed
 We can compute pitch stability based on the files from pitch delete zero using **ft_deltaf0.m**
 
-You can **clone this repository** and **run it directly without any modifications**. It will automatically read data from data -> pitch delete zero and save the processed files to data -> pitch processed.
+Please download **ft_deltaf0.m** and **cwtdiff.m** and drag it in the same folder (Mine is **manyvoices3_pilot**)
+
 
 ## Compute effect size
 **Clone this repository**, find ***data-> pitch processed -> effectsize_f0.m***, run it directly. And you will get **f0_cohend_results.csv** and **f0_extra_results.csv**
