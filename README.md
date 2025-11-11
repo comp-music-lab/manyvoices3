@@ -114,13 +114,13 @@ F0 is extracted based on the pYIN algorithm, estimating one f0 point every 0.005
 
 You can find this Python tool under ***Tools (elicit intervals and pitch) → f0_pYIN.py***.  
 
-In this `.py` file, you only need to modify **lines 58 and 59**:  
+In this `.py` file, you only need to modify **lines 60 and 61**:  
 ```python
 # Set input folder containing audio files and output folder for CSV files
-input_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio/"  # Replace with your audio file path
-output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/pitch delete zero/"  # Replace with CSV output file path
+input_folder = "/Users/betty/Desktop/manyvoices3_pilot/combined/"  # Replace with your audio file path
+output_folder = "/Users/betty/Desktop/manyvoices3_pilot/pitch delete zero/"  # Replace with csv output file path
 ```
-You may also need to modify **lines 34 to 35** if your file naming rules are not consistent with mine.
+You may also need to modify **lines 34 to 42** if your file naming rules are not consistent with mine.
 
 The elicited F0 is stored under ***data -> pitch delete zero***
 
