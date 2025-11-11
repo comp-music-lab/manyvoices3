@@ -135,7 +135,7 @@ Please download **ft_deltaf0.m** and **cwtdiff.m** and drag it in the same folde
 
 It should be noticed that you may need to change N=14 in **line 1** based on number of your data pairs
 
-And please keep **exactCI.m** in the **same folder with effectsize_f0.m**. 
+And please keep **exactCI.m** **pb_effectsize.m** in the **same folder with effectsize_f0.m**. 
 
 The effect size for computing pitch stability and IOI is calculated in the same way. The code and CSV results have been placed in the "pitch processed" and "IOI" folders, respectively.
 
