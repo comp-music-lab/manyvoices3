@@ -97,6 +97,18 @@ brew install ffmpeg
 
 These will install pydub (for audio processing) and ffmpeg (for handling audio file formats).
 
+In **concatenate.py**, you need to modify ***line 6 & 7*** for changing the path and ***line 29-32*** for naming the gender 
+```python
+# Line6-7: Input and output directories
+input_folder = '/Users/betty/Desktop/manyvoices3_pilot/split audio/'
+output_folder = '/Users/betty/Desktop/manyvoices3_pilot/combined/'
+
+# Line 29-32: Define gender based on speaker number
+if speaker_int in [2, 4, 6, 7, 10, 11, 19]: #This is what you need to renumber based on your experiment
+   gender = 'M'
+else:
+   gender = 'F'
+```
 ## F0 elicitation
 F0 is extracted based on the pYIN algorithm, estimating one f0 point every 0.005 seconds. 
 
