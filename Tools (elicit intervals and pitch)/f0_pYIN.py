@@ -22,7 +22,6 @@ def get_f0(audiofilepath, output_folder):
     #### Handle missing values (NaN) ####
     f0[np.isnan(f0)] = 0  # Replace NaN values with 0 to avoid calculation errors
 
-    #### Remove zero-F0 values ####
     valid_idx = (f0 > 50) & (f0 < 600)
     f0 = f0[valid_idx]
     t = t[valid_idx]  # Ensure time aligns with f0
@@ -31,13 +30,16 @@ def get_f0(audiofilepath, output_folder):
     duration = librosa.get_duration(y=y, sr=sr)
 
     # Parse filename to extract language, date, speaker, and condition
-    filename = os.path.basename(audiofilepath).replace('.wav', '')
-    match = re.match(r"(\w+)_(\d+)_(\d+)_(\w+)", filename)
+    filename = os.path.basename(audiofilepath)
+    match = re.match(r"([A-Za-z]+)_([A-Za-z]+)_([A-Z]\d+)_([A-Z])_(\d+)_(\w+)\.wav", filename)
 
     if match:
-        language, date, speaker, condition = match.groups()
+        language, location, group, gender, speaker, condition = match.groups()
+        gender = "Male" if gender == "M" else "Female" if gender == "F" else "Unknown"
+        print(f"解析成功: {language}, {location}, {group}, {gender}, {speaker}, {condition}")
     else:
-        language, date, speaker, condition = ("conv", "sing")
+        language, location, group, gender, speaker, condition = ["unknown"] * 6
+        print(f"⚠️ 文件名解析失败: {filename}")
 
     # Generate output csv file path
     filename = os.path.basename(audiofilepath).replace('.wav', '_f0.csv')
@@ -46,17 +48,17 @@ def get_f0(audiofilepath, output_folder):
     # Write to csv file
     with open(outputfilepath, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(["time", "f0", "language", "date", "speaker", "condition"])
+        writer.writerow(["time", "f0", "language", "location", "group", "gender", "speaker", "condition"])
         for i in range(len(t)):
-            writer.writerow([t[i], f0[i], language, date, speaker, condition])
+            writer.writerow([t[i], f0[i], language, location, group, gender, speaker, condition])
 
     print(f"✅Processing completed: {filename} → {outputfilepath}")
 
 
 if __name__ == "__main__":
     # Set input folder containing audio files and output folder for csv files
-    input_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/combined audio/"  # Replace with your audio file path
-    output_folder = "/Users/betty/Documents/MATLAB/song_speech_Mandarin/data/pitch delete zero/"  # Replace with csv output file path
+    input_folder = "/Users/betty/Desktop/manyvoices3_pilot/combined/"  # Replace with your audio file path
+    output_folder = "/Users/betty/Desktop/manyvoices3_pilot/pitch delete zero/"  # Replace with csv output file path
 
     # Ensure the output folder exists
     os.makedirs(output_folder, exist_ok=True)
