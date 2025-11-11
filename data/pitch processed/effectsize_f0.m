@@ -25,7 +25,7 @@ for i=1:length(singFiles)
     figure(i); histogram(f0_song); hold on; histogram(f0_conv); hold off
 end
 
-[CI, pval, mu_hat] = exactCI(d, sgm, 0.05*2, 0.5);
+[CI, pval, mu_hat] = exactCI(d, sgm, 0.05*2/3, 0.5);
 cohensd = sqrt(2)*norminv(d);
 
 disp("Cohen's d value:")
