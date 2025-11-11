@@ -36,10 +36,10 @@ def get_f0(audiofilepath, output_folder):
     if match:
         language, location, group, gender, speaker, condition = match.groups()
         gender = "Male" if gender == "M" else "Female" if gender == "F" else "Unknown"
-        print(f"解析成功: {language}, {location}, {group}, {gender}, {speaker}, {condition}")
+        print(f"Parsed successfully: {language}, {location}, {group}, {gender}, {speaker}, {condition}")
     else:
         language, location, group, gender, speaker, condition = ["unknown"] * 6
-        print(f"⚠️ 文件名解析失败: {filename}")
+        print(f"⚠️ Unsuccessful: {filename}")
 
     # Generate output csv file path
     filename = os.path.basename(audiofilepath).replace('.wav', '_f0.csv')
