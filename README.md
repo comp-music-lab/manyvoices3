@@ -63,11 +63,17 @@ Since this is a combined file, you may need to split it based on speaker and con
 
 ***Tools (elicit intervals and pitch) -> time_generator.py***
 
-And you can just modify line 60-61 in this .py
+And you can just modify line35-37 (for assign gender); line 42 (for generating combined whole csv document) line 60-61 (for splited documents) in this .py
 ```python
-    # Set input txt path and output folder
-    input_txt_file = "/Users/betty/Desktop/manyvoices3_pilot/result_duration_tier_1.txt""  # Your actual txt file path
-     output_folder = "/Users/betty/Desktop/manyvoices3_pilot/IOI/""  # Your output directory
+#Line 35-37: 
+    def assign_gender(speaker_id):
+        male_speakers = {2, 4, 6, 7, 10, 11, 19}  # Modify this set if needed
+        return "Male" if speaker_id in male_speakers else "Female"
+#Line 42
+    combined_csv_path = "/Users/betty/Desktop/manyvoices3_pilot/All_Speakers_IOI.csv"
+#Line 66-67
+    input_txt_file = "/Users/betty/Desktop/manyvoices3_pilot/result_duration_tier_1.txt"
+    output_folder = "/Users/betty/Desktop/manyvoices3_pilot/IOI/"
 ```
 
 The elicited intervals of each speaker is stored under ***data -> IOI***
