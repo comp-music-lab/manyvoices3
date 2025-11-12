@@ -185,3 +185,4 @@ CI_f0stab <- read_csv("./f0stab_extra_results.csv") %>%
 CI_IOI <- read_csv("./IOI_extra_results.csv") %>%
   mutate(Feature = "IOI Rate")
 ```
+Line 32 **print(CI_data)** is the result including the mean translated Cohen'd that you may use in your paper (specifically "mu_hat"). 
