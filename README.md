@@ -25,6 +25,7 @@ Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., 
 - [Compute effect size](#compute-effect-size)
 - [Plotting acoustic features](#plotting-acoustic-features)
 - [Plotting effect size](#plotting-effect-size)
+- [Inter rater reliability](#Inter-rater-reliability)
 
 ## File naming rules
 I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
@@ -186,3 +187,9 @@ CI_IOI <- read_csv("./IOI_extra_results.csv") %>%
   mutate(Feature = "IOI Rate")
 ```
 Line 32 **print(CI_data)** is the result including the mean translated Cohen'd that you may use in your paper (specifically "mu_hat"). 
+
+## Inter rater reliability
+Step 1. Choose a participant ID (the one you’d like Zixuan Jia to annotate so you can compare her annotations with yours).
+Open the corresponding full TextGrid file of that participant in Praat, select “Extract one tier”, and type “2” to retain only the tier 2 (speaker) annotations while removing tier 1.
+Note: You need to send **two recordings**, **two Textgrid (Tier 1 removed)**, tell Jia **participant ID** that you want Jia to annotate, and the transcription (both singing and conversation) from that participant (see example in the Inter rater reliability folder) to email **zjia109@aucklanduni.ac.nz** cc Patrick Savage **patrick.savage@auckland.ac.nz**
+![image](https://github.com/user-attachments/assets/203eab6f-8141-4af3-bac1-97b34820a70e)
