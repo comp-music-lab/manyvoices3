@@ -5,7 +5,7 @@ library(ggplot2)
 library(gridExtra)
 
 # Set the folder path where the pitch processed files are located
-folder_path <- "/Users/betty/Desktop/manyvoices3/data/pitch processed/" 
+folder_path <- "/Users/betty/Desktop/manyvoices3_pilot/pitch processed/" 
 # Get the path of all csv files
 file_list <- list.files(folder_path, pattern = "*.csv", full.names = TRUE)
 # Read all csv files and store them in a list
@@ -90,7 +90,7 @@ g3 <- ggplot(data3, aes(x = condition, y = mean_f0stab, color = condition)) +
 show(g3)
 
 # Set the path where the interval file is located
-data4 <- read.csv("/Users/betty/Desktop/manyvoices3/data/interval_Englishpilot.csv")
+data4 <- read.csv("//Users/betty/Desktop/manyvoices3_pilot/All_Speakers_IOI.csv")
 data5 <- data4 %>%
   select(duration, speaker, condition) %>%
   group_by(speaker, condition) %>%
@@ -140,4 +140,4 @@ g2 <- g2 + theme_grey() + title_theme
 g3 <- g3 + theme_grey() + title_theme
 
 combined_plot <- grid.arrange(g1 + theme(legend.position = "none"), g2 + theme(legend.position = "none"), g3 + theme(legend.position = "none"), ncol=3, widths = c(0.7, 0.65, 0.7))
-ggsave("/Users/betty/Desktop/manyvoices3/data/combined_plot_acoustic features_English.png", plot = combined_plot, width = 12, height = 6)
+ggsave("/Users/betty/Desktop/manyvoices3_pilot/combined_plot_acoustic features.png", plot = combined_plot, width = 12, height = 6)
