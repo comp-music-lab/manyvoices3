@@ -152,16 +152,16 @@ Run **plot_acoustic features.R**, three points need to be modified：
 
 (1) Line 8: Modify the path to the location where the ***pitch processed folder*** is stored on your local computer.
 ```R
-folder_path <- "/Users/betty/Desktop/manyvoices3/data/pitch processed/" 
+folder_path <- ""/Users/betty/Desktop/manyvoices3_pilot/pitch processed/" " 
 ```
-（2） Line 93: Modify the path to the location where ***interval_Englishpilot.csv*** is stored on your local computer.
+（2） Line 93: Modify the path to the location where ***All_Speakers_IOI.csv*** is stored on your local computer.
 ```R
 # Set the path where the interval file is located
-data4 <- read.csv("/Users/betty/Desktop/manyvoices3/data/interval_Englishpilot.csv")
+data4 <- read.csv("/Users/betty/Desktop/manyvoices3_pilot/All_Speakers_IOI.csv")
 ```
 （3）Line 143: Modify the path to the location where you want to save the images on your local computer.
 ```R
-ggsave("/Users/betty/Desktop/manyvoices3/data/combined_plot_acoustic features_English.png", plot = combined_plot, width = 12, height = 6)
+ggsave("/Users/betty/Desktop/manyvoices3_pilot/figure/combined_plot_acoustic features.png", plot = combined_plot, width = 12, height = 6)
 ```
 ## Plotting effect size
 Run ***plot_cohend.R***, change the file paths from **line 7 to line 23** to the corresponding locations where the files are stored on your local computer.
