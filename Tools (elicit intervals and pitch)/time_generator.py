@@ -38,7 +38,12 @@ def process_txt(input_txt, output_folder):
 
     df["gender"] = df["speaker"].apply(assign_gender)
 
-    # === 5. Group by speaker and condition, and save separate CSV files ===
+    # === 5. Save the combined dataset ===
+    combined_csv_path = os.path.join(output_folder, "All_Speakers_IOI.csv")
+    df.to_csv(combined_csv_path, index=False)
+    print(f"💾 Combined CSV saved: {combined_csv_path}")
+    
+    # === 6. Group by speaker and condition, and save separate CSV files ===
     grouped = df.groupby(["speaker", "condition"])
 
     for (speaker, condition), group_data in grouped:
