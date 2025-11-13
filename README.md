@@ -193,7 +193,7 @@ Step 1. Choose a participant ID (the one you’d like Zixuan Jia to annotate so 
 
 Open the corresponding full TextGrid file of that participant in Praat, select “Extract one tier”, and type “2” to retain only the tier 2 (speaker) annotations while removing tier 1.
 
-Note: You need to send **two (group) recordings**, **two Textgrid (Tier 1 removed)**, tell Jia **participant ID** that you want Jia to annotate, and the transcription (both singing and conversation) from that participant (see example in the Inter rater reliability folder) to email **zjia109@aucklanduni.ac.nz** cc Patrick Savage **patrick.savage@auckland.ac.nz**
+Note: You need to send **two (group) recordings**, **two Textgrid (Tier 1 removed)**, tell Jia **participant ID** that you want Jia to annotate, and the **transcription (both singing and conversation)** from that participant (see example in the Inter rater reliability folder) to email **zjia109@aucklanduni.ac.nz** cc Patrick Savage **patrick.savage@auckland.ac.nz**
 ![image](https://github.com/user-attachments/assets/203eab6f-8141-4af3-bac1-97b34820a70e)
 
 Step 2. Put Jia's Textgrids and your Textgrids into the same folder. Using ***Tools > Get Duration of One Tier. Praat*** to get the intervals from Tier 1. 
