@@ -190,6 +190,30 @@ Line 32 **print(CI_data)** is the result including the mean translated Cohen'd t
 
 ## Inter rater reliability
 Step 1. Choose a participant ID (the one you’d like Zixuan Jia to annotate so you can compare her annotations with yours).
+
 Open the corresponding full TextGrid file of that participant in Praat, select “Extract one tier”, and type “2” to retain only the tier 2 (speaker) annotations while removing tier 1.
-Note: You need to send **two recordings**, **two Textgrid (Tier 1 removed)**, tell Jia **participant ID** that you want Jia to annotate, and the transcription (both singing and conversation) from that participant (see example in the Inter rater reliability folder) to email **zjia109@aucklanduni.ac.nz** cc Patrick Savage **patrick.savage@auckland.ac.nz**
+
+Note: You need to send **two (group) recordings**, **two Textgrid (Tier 1 removed)**, tell Jia **participant ID** that you want Jia to annotate, and the transcription (both singing and conversation) from that participant (see example in the Inter rater reliability folder) to email **zjia109@aucklanduni.ac.nz** cc Patrick Savage **patrick.savage@auckland.ac.nz**
 ![image](https://github.com/user-attachments/assets/203eab6f-8141-4af3-bac1-97b34820a70e)
+
+Step 2. Put Jia's Textgrids and your Textgrids into the same folder. Using ***Tools > Get Duration of One Tier. Praat*** to get the intervals from Tier 1. 
+
+Please name Jia's and your Textgrids as **Annotator_Language_Location_Group_Condition.Textgrid** (e.g. Jia_Mandarin_Auckland_C1_conv.Textgrid)
+![image](https://github.com/user-attachments/assets/67c8fdfd-cba0-42d6-a0b4-1096e2da0a34)
+
+Step 3. Run the ***Tools > separate annotation.py*** to separate the annotations from target participants based on Condition and Annotator
+
+Modify line 5-6, line 17, line 30. 
+
+```python
+input_file = "/Users/betty/Desktop/Rater/result_duration_tier_4.txt"
+output_dir = "/Users/betty/Desktop/Rater/"
+
+df_filtered = df[df['IntervalName'] == 19]
+
+out_path = os.path.join(annotator_folder, f"p19_{condition}.csv")
+```
+
+Step 4. Run the **plot_irr.R** to calculate the intraclass correlation
+
+I marked the lines that you need to change, including line 5-6, 8, 12, 15, 28, 54, 63, 65
