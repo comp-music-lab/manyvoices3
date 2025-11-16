@@ -201,7 +201,7 @@ Step 2. Put Jia's Textgrids and your Textgrids into the same folder. Using ***To
 Please name Jia's and your Textgrids as **Annotator_Language_Location_Group_Condition.Textgrid** (e.g. Jia_Mandarin_Auckland_C1_conv.Textgrid)
 ![image](https://github.com/user-attachments/assets/67c8fdfd-cba0-42d6-a0b4-1096e2da0a34)
 
-Step 3. Run the ***Inter rater reliability > separate annotation.py*** to separate the annotations from target participants based on Condition and Annotator
+Step 3. Run the ***Tools > separate annotation.py*** to separate the annotations from target participants based on Condition and Annotator
 
 Modify line 5-6, line 17, line 30. 
 
