@@ -189,7 +189,7 @@ CI_IOI <- read_csv("./IOI_extra_results.csv") %>%
 Line 32 **print(CI_data)** is the result including the mean translated Cohen'd that you may use in your paper (specifically "mu_hat"). 
 
 ## Inter rater reliability
-Step 1. Choose a participant ID (the one you’d like Zixuan Jia to annotate so you can compare her annotations with yours).
+Step 1. Randomly choose a participant ID (using a random number generator; for Zixuan Jia to annotate so you can compare her annotations with yours).
 
 Open the corresponding full TextGrid file of that participant in Praat, select “Extract one tier”, and type “2” to retain only the tier 2 (speaker) annotations while removing tier 1.
 
