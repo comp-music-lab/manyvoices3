@@ -1,0 +1,248 @@
+---
+title: "MV3_Mandarin_exploratory_analysis"
+output: html_document
+date: "2025-07-27"
+---
+```{r}
+# load nessary library
+library(tidyverse)
+library(readr)
+library(dplyr)
+library(ggpubr)
+library(ggplot2)
+library(patchwork)
+library(reshape2)
+```
+
+
+```{r}
+# Elicit information relevant to musianship
+music_info <- read_csv("/Users/betty/Desktop/Mandarin real data/Mandarin_song_speech_0520.csv") %>%
+  dplyr::select(`renumbered ID`, musicianship_self_perceived, musicianship_compliment)
+
+effectsize_f0 <- read_csv("/Users/betty/Desktop/Mandarin real data_group level/pitch processed zero_by participant/f0_cohend_results.csv") %>%
+  mutate(Feature = "Pitch Height")
+merged_f0 <- effectsize_f0 %>%
+  left_join(music_info, by = c("SpeakerID" = "renumbered ID"))
+
+print(merged_f0)
+```
+```{r}
+# plot musicianship (self_perceived) with cohen'd
+merged_all <- merged_all %>%
+  mutate(Feature = ifelse(Feature == "IOI Rate", "Temporal Rate", Feature))
+
+cor_stats <- merged_all %>%
+  group_by(Feature) %>%
+  summarise(
+    r = cor(Cohens_d, musicianship_self_perceived, use = "complete.obs"),
+    p = cor.test(Cohens_d, musicianship_self_perceived)$p.value
+  ) %>%
+  mutate(
+    label = paste0("r = ", round(r, 2))
+  )
+
+label_positions <- tibble(
+  Feature = c("Pitch Height", "Pitch Stability", "Temporal Rate"),
+  x = c(Inf, Inf, Inf),
+  y = c(100, 94, 88),
+  hjust = 1.1
+)
+
+cor_labels <- left_join(cor_stats, label_positions, by = "Feature")
+
+p1 <- ggplot(merged_all, aes(x = Cohens_d, y = musicianship_self_perceived, color = Feature)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = TRUE, size = 1.2, fill = "gray70") +
+  geom_text(
+    data = cor_labels,
+    aes(x = x, y = y, label = label, color = Feature, hjust = hjust),
+    inherit.aes = FALSE,
+    size = 5
+  ) +
+  labs(
+    x = "Cohen's d",
+    y = "Musicianship (self-perceived)",
+    color = "Acoustic features"
+  ) +
+  theme_bw(base_size = 12)
+
+show(p1)
+
+cor_stats %>%
+  dplyr::select(Feature, r, p) %>%
+  mutate(
+    r = round(r, 2),
+    p = ifelse(p < .001, "< .001", round(p, 3))
+  )
+ggsave("/Users/betty/Desktop/Mandarin real data/figure/musicianship_self_perceived.png", width = 8, height = 6, dpi = 300)
+
+```
+
+
+```{r}
+effectsize_f0stab <- read_csv("/Users/betty/Desktop/Mandarin real data_group level/pitch processed zero_by participant/f0stab_cohend_results.csv") %>%
+  mutate(Feature = "Pitch Stability")
+merged_f0stab <- effectsize_f0stab %>%
+  left_join(music_info, by = c("SpeakerID" = "renumbered ID"))
+
+print(merged_f0stab)
+effectsize_IOI <- read_csv("/Users/betty/Desktop/Mandarin real data_group level/IOI_by_participant/IOI_cohend_results.csv") %>%
+  mutate(Feature = "IOI Rate")
+merged_IOI <- effectsize_IOI %>%
+  left_join(music_info, by = c("SpeakerID" = "renumbered ID"))
+print(merged_IOI)
+```
+```{r}
+# plot musicianship (compliment) with cohen'd
+merged_all <- merged_all %>%
+  mutate(Feature = ifelse(Feature == "IOI Rate", "Temporal Rate", Feature))
+
+cor_stats <- merged_all %>%
+  group_by(Feature) %>%
+  summarise(
+    r = round(cor(Cohens_d, musicianship_compliment, use = "complete.obs"), 2),  
+    p = cor.test(Cohens_d, musicianship_compliment)$p.value
+  ) %>%
+  mutate(
+    label = paste0("r = ", r)
+  )
+
+label_positions <- tibble(
+  Feature = c("Pitch Height", "Pitch Stability", "Temporal Rate"),
+  x = c(Inf, Inf, Inf),
+  y = c(100, 94, 88),
+  hjust = 1.1
+)
+
+cor_labels <- left_join(cor_stats, label_positions, by = "Feature")
+
+p2 <- ggplot(merged_all, aes(x = Cohens_d, y = musicianship_compliment, color = Feature)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = TRUE, size = 1.2, fill = "grey70") +
+  geom_text(
+    data = cor_labels,
+    aes(x = x, y = y, label = label, color = Feature, hjust = hjust),
+    inherit.aes = FALSE,
+    size = 5
+  ) +
+  labs(
+    x = "Cohen's d",
+    y = "Musicianship (complimented)",
+    color = "Type"
+  ) +
+  theme_bw(base_size = 12)
+
+cor_stats %>%
+  select(Feature, r, p) %>%
+  mutate(
+    r = round(r, 2),
+    p = ifelse(p < .001, "< .001", round(p, 3))
+  )
+show(p2)
+
+p1_no_legend <- p1 + theme(legend.position = "none")
+combined_plot <- p1_no_legend | p2 
+
+combined_plot
+
+ggsave("/Users/betty/Desktop/Mandarin real data_group level/figure/musicianship_cohend_plots.png", combined_plot, width = 12, height = 6, dpi = 300)
+```
+
+```{r}
+#plot bar chart showing the distribution of musicianship-related variables
+data <- read.csv("/Users/betty/Desktop/Mandarin real data/Mandarin_song_speech_0520.csv")
+
+
+cols <- c("know_song",
+          "musicianship_self_perceived",
+          "musicianship_compliment",
+          "like_song",
+          "sing_regularly")
+
+df_long <- melt(data[, cols], variable.name = "Measure", value.name = "Score")
+
+summary_df <- aggregate(Score ~ Measure, data = df_long, 
+                        FUN = function(x) c(mean = mean(x, na.rm = TRUE), 
+                                            se = sd(x, na.rm = TRUE)/sqrt(sum(!is.na(x)))))
+summary_df <- do.call(data.frame, summary_df)
+colnames(summary_df) <- c("Measure", "Mean", "SE")
+
+summary_df$Measure <- factor(summary_df$Measure, 
+                             levels = c("know_song",
+                                        "musicianship_self_perceived",
+                                        "musicianship_compliment",
+                                        "like_song",
+                                        "sing_regularly"),
+                             labels = c("Song Familiarity",
+                                        "Musicianship\n (self-perceived)",
+                                        "Musicianship\n (complimented)",
+                                        "Song Liking",
+                                        "Singing Regularity"))
+
+df_long$Measure <- factor(df_long$Measure, 
+                          levels = c("know_song",
+                                     "musicianship_self_perceived",
+                                     "musicianship_compliment",
+                                     "like_song",
+                                     "sing_regularly"),
+                          labels = c("Song Familiarity",
+                                     "Musicianship\n (self-perceived)",
+                                     "Musicianship\n (complimented)",
+                                     "Song Liking",
+                                     "Singing Regularity"))
+
+p <- ggplot(summary_df, aes(x = Measure, y = Mean, fill = Measure)) +
+  geom_bar(stat = "identity", width = 0.7, color = "black", alpha = 0.7) +
+  geom_point(data = df_long, 
+             aes(x = Measure, y = Score, color = Measure),
+             position = position_jitter(width = 0.2, height = 0),
+             size = 1.5, alpha = 0.6) +
+  geom_errorbar(aes(ymin = Mean - SE, ymax = Mean + SE), width = 0.2) +
+  labs(y = "Score", x = NULL, size = 12) +
+  scale_y_continuous(
+    limits = c(0, 105),
+    breaks = seq(0, 100, 25),
+    expand = c(0, 0.5)
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(angle = 0, hjust = 0.5, color = "black", size = 10),
+    axis.text.y = element_text(color = "black", size = 12),
+    axis.title.y = element_text(color = "black"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = "white", color = "black", linewidth = 0.5),
+    plot.background = element_rect(fill = "white", color = NA)
+  ) +
+  scale_fill_brewer(palette = "Pastel1") +
+  scale_color_brewer(palette = "Set1")
+
+show(p)
+
+ggsave("/Users/betty/Desktop/Mandarin real data_group level/figure/musicianship_summary_barplot.png",
+       plot = p, width = 6, height = 4, units = "in", dpi = 300)
+
+```
+```{r}
+
+```
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
