@@ -93,7 +93,7 @@ And you can just modify line35-37 (for assign gender); line 42 (for generating c
 The elicited intervals of each speaker is stored under ***data -> IOI***
 
 ## Split the audio
-I splited audio first based on speaker and combined them manually in Praat for future F0 elicitation.
+Split audio first based on speaker and combine them manually in Praat for future F0 elicitation.
 
 You can find this Praat script in the repository under:
 
@@ -147,19 +147,19 @@ The elicited F0 is stored under ***data -> pitch delete zero***
 ## F0 reprocessed
 We can compute pitch stability based on the files from pitch delete zero using **ft_deltaf0.m**
 
-Please download **ft_deltaf0.m** and **cwtdiff.m** and drag it in the same folder (Mine is **manyvoices3_pilot**)
+Please download **ft_deltaf0.m** and **cwtdiff.m** and drag it into the same folder (Mine is **manyvoices3_pilot**)
 
 
 ## Compute effect size
 **Clone this repository**, find ***data-> pitch processed -> effectsize_f0.m***, run it directly. And you will get **f0_cohend_results.csv** and **f0_extra_results.csv**
 
-It should be noticed that you may need to change N=14 in **line 1** based on number of your data pairs
+It should be noticed that you may need to change N=14 in **line 1** based on your number of data pairs
 
 And please keep **exactCI.m** **pb_effectsize.m** in the **same folder with effectsize_f0.m**. 
 
 The effect size for computing pitch stability and IOI is calculated in the same way. The code and CSV results have been placed in the "pitch processed" and "IOI" folders, respectively.
 
-And I dragged all the generated effect size results to ***data -> effectsize*** folder for future plotting.
+All the generated effect size results are dragged to ***data -> effectsize*** folder for future plotting.
 
 ## Plotting acoustic features
 Run **plot_acoustic features.R**, three points need to be modified：
@@ -168,10 +168,10 @@ Run **plot_acoustic features.R**, three points need to be modified：
 ```R
 folder_path <- ""/Users/betty/Desktop/manyvoices3_pilot/pitch processed/" " 
 ```
-（2） Line 93: Modify the path to the location where ***All_Speakers_IOI.csv*** is stored on your local computer.
+（2） Line 93: Modify the path to the location where the ***IOI files*** are stored on your local computer.
 ```R
 # Set the path where the interval file is located
-data4 <- read.csv("/Users/betty/Desktop/manyvoices3_pilot/All_Speakers_IOI.csv")
+folder_path2 <- "/Users/betty/Desktop/manyvoices3_pilot/IOI/"
 ```
 （3）Line 143: Modify the path to the location where you want to save the images on your local computer.
 ```R
