@@ -8,7 +8,14 @@ This "Many Voices 3" Programmatic Registered Report will ultimately result in up
 
 **1) Mandarin speakers from Auckland**: Jia, Z., Purdy, S., & Savage, P. E. (2026 [In press]). Higher pitch, slower tempo, and greater stability in singing than in conversation among Mandarin speakers in Auckland: A Registered Report replicating Ozaki et al. (2024). Peer Community Journal, 6. https://doi.org/10.24072/pcjournal.698  [Peer Community In Registered Reports editorial recommendation and Stage 2 peer review: https://doi.org/10.24072/pci.rr.101216]
 
-To reproduce the analyses for any of these articles, use the code below, but replace the data sub-directory with the one corresponding to the article in question (e.g., replacing "manyvoices3_pilot" with "Mandarin_Auckland" to reproduce the analyses in Jia et al., 2026)
+To reproduce the analyses for any of these articles, use the code below, but replace the data sub-directory with the one corresponding to the article in question (e.g., replacing "manyvoices3_pilot" with "Mandarin_Auckland" to reproduce the analyses in Jia et al., 2026). All articles use the same standard analysis code/pipeline below for confirmatory analyses (testing three hypotheses about differences in pitch height, pitch stability, and temporal rate between song and speech). However, each paper may also include separate exploratory analyses (detailed in the folder labeled "Exploratory analysis").
+
+The full confirmatory analysis requires four programs - please download and install them if you haven't already. Three (R, Python, Praat) are free and open source; one (Matlab) is proprietary with various trial and licensing options.
+Praat: https://www.fon.hum.uva.nl/praat/
+R: https://www.r-project.org/
+Python: https://www.python.org/ 
+Matlab: https://au.mathworks.com/products/matlab.html  
+Note that the key figures from the papers can be reproduced using only R and the provided output data files from the other analysis programs.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6c7f8e7f-5d54-4f4a-a534-a25c06b1ca99" width="400">
