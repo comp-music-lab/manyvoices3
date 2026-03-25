@@ -1,6 +1,6 @@
 # [Many Voices 3: Acoustic relationships between song and speech across languages ](https://rr.peercommunityin.org/articles/rec?id=961)
 
-This repository contains data and code used in a Programmatic Registered Report. Programmatic Registered Reports are a new form of research where multiple journal articles are published all sharing a single peer-reviewed Stage 1 Registered Report protocol (https://rr.peercommunityin.org/PCIRegisteredReports/help/guide_for_authors#h_52492857233251613309610581). 
+This repository contains data, code, and analysis instructions used in a Programmatic Registered Report. Programmatic Registered Reports are a new form of research where multiple journal articles are published all sharing a single peer-reviewed Stage 1 Registered Report protocol (https://rr.peercommunityin.org/PCIRegisteredReports/help/guide_for_authors#h_52492857233251613309610581). 
 
 This "Many Voices 3" Programmatic Registered Report will ultimately result in up to 27 different articles, representing song/speech data from up to 26 different locations/languages and one meta-analyses across all languages. This repository will continue to be updated as each dataset is analysed and each article published. Currently, the repository contains data/code for the following items, which have completed peer review:
 
@@ -8,7 +8,7 @@ This "Many Voices 3" Programmatic Registered Report will ultimately result in up
 
 **1) Mandarin speakers from Auckland**: Jia, Z., Purdy, S., & Savage, P. E. (2026 [In press]). Higher pitch, slower tempo, and greater stability in singing than in conversation among Mandarin speakers in Auckland: A Registered Report replicating Ozaki et al. (2024). Peer Community Journal, 6. https://doi.org/10.24072/pcjournal.698  [Peer Community In Registered Reports editorial recommendation and peer reviews: Stage 1: https://rr.peercommunityin.org/articles/rec?id=961; Stage 2: https://doi.org/10.24072/pci.rr.101216]
 
-To reproduce the analyses for any of these articles, use the code below, but replace the data sub-directory with the one corresponding to the article in question (e.g., replacing "manyvoices3_pilot" with "Mandarin_Auckland" for Jia et al., 2026)
+To reproduce the analyses for any of these articles, use the code below, but replace the data sub-directory with the one corresponding to the article in question (e.g., replacing "manyvoices3_pilot" with "Mandarin_Auckland" to reproduce the analyses in Jia et al., 2026)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6c7f8e7f-5d54-4f4a-a534-a25c06b1ca99" width="400">
@@ -19,7 +19,7 @@ To reproduce the analyses for any of these articles, use the code below, but rep
 
 
 ## 📰 News
-**- 2026 Mar ??.** Our first full (Stage 2) journal article (analysing Mandarin speakers from Auckland) was published in Peer Community Journal! (https://doi.org/10.24072/pcjournal.698)
+**- 2026 Mar ??.** Our first full (Stage 2) journal article (analysing Mandarin speakers from Auckland) will be published in Peer Community Journal! (https://doi.org/10.24072/pcjournal.698)
 
 **- 2026 Feb 13.** Our Registered Report analysing Mandarin speakers from Auckland completed Stage 2 peer review and was recommended for publication! (https://doi.org/10.24072/pci.rr.101216)
 
@@ -41,20 +41,20 @@ To reproduce the analyses for any of these articles, use the code below, but rep
 - [Inter rater reliability](#Inter-rater-reliability)
 
 ## File naming rules
-I highly recommend having a consistent naming convention for files, as some scripts rely on the file names to split information. 
+Please use a consistent naming convention for files, as some scripts rely on the file names to split information. 
 
-The naming convention for my files is ***language_location_group_condition.wav***, for example, ***Mandarin_Auckland_C1_conv.wav***. 
+The naming convention for files is ***language_location_group_condition.wav***, for example, ***Mandarin_Auckland_C1_conv.wav***. 
 
 If it's an extracted f0 or time interval file, '_f0' or '_IOI' is added at the end.
 
 ## Annotation
-The English audio data is available here: https://osf.io/e4pqv/.
+Audio data is available here: https://osf.io/e4pqv/.
 
 The annotation is divided into two tiers:
 
-1. First tier (interval): I labels speaker ID (numbers) among units. 
+1. First tier (interval): label speaker ID (numbers) among units. 
 
-2. Second tier (speaker): I labeled speakers as 1, 2, 3, etc., corresponding to Speaker 1, Speaker 2, Speaker 3, and so on. Since we have three groups, we may all name participants 1-10 across three groups. To make the participants ID continuous, I may rename the ID. For example, if C1 group have 10 participants with ID from 1-10, for R1 group, I may rename them as 11-20. 
+2. Second tier (speaker): label speakers as 1, 2, 3, etc., corresponding to Speaker 1, Speaker 2, Speaker 3, and so on. Since we have three groups, we may all name participants 1-10 across three groups. To make the participants ID continuous, we may rename the ID. For example, if C1 group have 10 participants with ID from 1-10, for R1 group, we may rename them as 11-20. 
 
 An example of the annotation is shown below in Praat.
 ![image](https://github.com/user-attachments/assets/89a0fed2-93cc-4eb1-a57e-edb631fd6ee8)
