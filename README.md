@@ -1,18 +1,31 @@
-# [A Programmatic Stage 1 Registered Report of global song-speech relationships replicating and extending Ozaki et al. (2024) and Savage et al. (2024)](https://doi.org/10.31234/osf.io/c2dba)
-Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., Arabadjiev, A., Arnese, F., Bamford, J., Barbosa, B. S., Beck, A.-K., Cabildo, A., Chiba, G., Dabaghi Varnosfaderani, S., Echim, S., Fujii, S., Gabriel, S., Grassi, M., Guiotto Nai Fovino, L., Hajič jr., J., Hartmann, M., Hansen, N. C., He, Y., Kolios, S., Krzyżanowski, W., Kuikuro, U., Kurdova, D., Liu, F., Loui, P., Mikova, Z., Moya, D., Natsitsabui, R., Niiranen, M., Nguqu, N., Nuska, P., Nweke, F. E., Opondo, P., Parkinson, H., Parselelo, M. L., Perry, G., Pfordresher, P. Q., Podlipniak, P., Popescu, T., Ross, R. M., Shi, Z., Silva-Zurita, J., Soto-Silva, I., Štěpánková, B., Thompson, W. F., Vaida, S., Vanden Bosch der Nederlanden, C. (In Principle Accepted). A Programmatic Stage 1 Registered Report of global song-speech relationships replicating and extending Ozaki et al. (2024) and Savage et al. (2025). Peer Community In Registered Report
+# [Many Voices 3: Acoustic relationships between song and speech across languages ](https://rr.peercommunityin.org/articles/rec?id=961)
+
+This repository contains data and code used in a Programmatic Registered Report. Programmatic Registered Reports are a new form of research where multiple journal articles are published all sharing a single peer-reviewed Stage 1 Registered Report protocol (https://rr.peercommunityin.org/PCIRegisteredReports/help/guide_for_authors#h_52492857233251613309610581). 
+
+This "Many Voices 3" Programmatic Registered Report will ultimately result in up to 27 different articles, representing song/speech data from up to 26 different locations/languages and one meta-analyses across all languages. This repository will continue to be updated as each dataset is analysed and each article published. Currently, the repository contains data/code for the following items, which have completed peer review:
+
+0) Stage 1 protocol (this is the main protocol on which all articles will be based): Savage, P. E., Jia, Z., Ozaki, Y., Pavlovich, D., Purdy, S., Ampiah-Bonney, A., Arabadjiev, A., Arnese, F., Bamford, J., Barbosa, B. S., Beck, A.-K., Cabildo, A., Chiba, G., Dabaghi Varnosfaderani, S., Echim, S., Fujii, S., Gabriel, S., Grassi, M., Guiotto Nai Fovino, L., Hajič jr., J., Hartmann, M., Hansen, N. C., He, Y., Kolios, S., Krzyżanowski, W., Kuikuro, U., Kurdova, D., Liu, F., Loui, P., Mikova, Z., Moya, D., Natsitsabui, R., Niiranen, M., Nguqu, N., Nuska, P., Nweke, F. E., Opondo, P., Parkinson, H., Parselelo, M. L., Perry, G., Pfordresher, P. Q., Podlipniak, P., Popescu, T., Ross, R. M., Shi, Z., Silva-Zurita, J., Soto-Silva, I., Štěpánková, B., Thompson, W. F., Vaida, S., Vanden Bosch der Nederlanden, C. (In Principle Accepted). A Programmatic Stage 1 Registered Report of global song-speech relationships replicating and extending Ozaki et al. (2024) and Savage et al. (2025). Peer Community In Registered Reports. A Programmatic Stage 1 Registered Report of global song-speech relationships replicating and extending Ozaki et al. (2024) and Savage et al. (2025). Peer Community In Registered Reports. https://doi.org/10.31234/osf.io/c2dba_v6 [editorial recommendation and peer review: https://rr.peercommunityin.org/articles/rec?id=961] 
+
+1) Mandarin speakers from Auckland: Jia, Z., Purdy, S., & Savage, P. E. (2026 [In press]). Higher pitch, slower tempo, and greater stability in singing than in conversation among Mandarin speakers in Auckland: A Registered Report replicating Ozaki et al. (2024). Peer Community Journal, 6. https://doi.org/10.24072/pcjournal.698  [Peer Community In Registered Reports editorial recommendation and peer reviews: Stage 1: https://rr.peercommunityin.org/articles/rec?id=961; Stage 2: https://doi.org/10.24072/pci.rr.101216]
+
+To reproduce the analyses for any of these articles, use the code below, but replace the data sub-directory with the one corresponding to the article in question (e.g., replacing "manyvoices3_pilot" with "Mandarin_Auckland" for Jia et al., 2026)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6c7f8e7f-5d54-4f4a-a534-a25c06b1ca99" width="400">
   <br>
-  <em>Pictured by Nelson Shi</em>
+  <em>Figure by Nelson Shi</em>
 </p>
 
 
 
 ## 📰 News
-**- 2025 May 9.** Our Stage 1 Registered Report received In Principle Acceptance! (https://rr.peercommunityin.org/articles/rec?id=961)
+**- 2026 Mar ??.** Our first full (Stage 2) journal article (analysing Mandarin speakers from Auckland) was published in Peer Community Journal! (https://doi.org/10.24072/pcjournal.698)
 
-**- 2025 Feb 17.** Our paper is available on PsyArXiv (Savage et al., 2025, https://doi.org/10.31234/osf.io/c2dba)
+**- 2026 Feb 13.** Our Registered Report analysing Mandarin speakers from Auckland completed Stage 2 peer review and was recommended for publication! (https://doi.org/10.24072/pci.rr.101216)
+
+**- 2025 May 9.** Our Stage 1 Registered Report protocol received In Principle Acceptance! (https://rr.peercommunityin.org/articles/rec?id=961)
+
+**- 2025 Feb 17.** Our Stage 1 Registered Report protocol is available on PsyArXiv (Savage et al., 2025, https://doi.org/10.31234/osf.io/c2dba)
 
 
 ## 📖 Table of Contents
