@@ -10,8 +10,8 @@ library(grid)
 INTERVAL <- 5
 SUBGROUPING <- TRUE
 
-##
-collabT <- read.csv(collaboratorinfofile)
+##change it to your own path 
+collabT <- read.csv("/CollaboratorsPlotData.csv")
 
 langlabel <- data.frame(Name = collabT$Name,
                         Lang = collabT$ProvidedLanguageName,
@@ -100,7 +100,6 @@ LANGCOLORMAP <- data.frame(languagefamily = unique(langlabel$Family), rgb = cols
 ##
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
-langlabel <- langlabel[!(langlabel$Name %in% exclusion), ]
 langlabel$ID <- 1:nrow(langlabel)
 
 gobj <- ggplot(data = world) + theme_set(theme_bw()) +
@@ -114,8 +113,9 @@ gobj <- ggplot(data = world) + theme_set(theme_bw()) +
   theme(panel.background = element_rect(fill = "aliceblue")) + 
   scale_fill_manual(values = LANGCOLORMAP$rgb, breaks = LANGCOLORMAP$languagefamily)
 
-##
-ggsave(file = paste(OUTPUTDIR, "CollabMap_", fileid, ".png", sep = ""), plot = gobj, width = 8, height = 7)
+##Change it yo your own outputdir 
+OUTPUTDIR = "/Users/betty/Downloads/"
+ggsave(file = paste(OUTPUTDIR, "CollabMap.png", sep = ""), plot = gobj, width = 8, height = 7， dpi = 600)
 write.csv(file = paste(OUTPUTDIR, "langlabel.csv", sep = ""), langlabel)
 
 ##

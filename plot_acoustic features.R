@@ -89,21 +89,31 @@ g3 <- ggplot(data3, aes(x = condition, y = mean_f0stab, color = condition)) +
   ) 
 show(g3)
 
+# Set the folder path where the IOI files are located
+folder_path2 <- "/Users/betty/Desktop/manyvoices3_pilot/IOI/" 
+# Get the path of all csv files
+file_list2 <- list.files(folder_path2, pattern = "*_IOI.csv", full.names = TRUE)
+# Read all csv files and store them in a list
+data_list2 <- lapply(file_list2, read.csv)
+# Add file names to each data frame for easier processing
+names(data_list2) <- basename(file_list2)
+# Print the names of the loaded files
+print(names(data_list2))
+# Combine all the data
+data4 <- bind_rows(data_list2)
 # Set the path where the interval file is located
-data4 <- read.csv("//Users/betty/Desktop/manyvoices3_pilot/All_Speakers_IOI.csv")
 data5 <- data4 %>%
-  select(duration, speaker, condition) %>%
+  dplyr::select(duration, speaker, condition) %>%
   group_by(speaker, condition) %>%
-  #  summarise(mean_ISI = mean(duration, na.rm = TRUE), .groups = "drop") 
   summarise(
-    mean_ISI = mean(duration, na.rm = TRUE),
-    ISI_rate = 1 / mean_ISI,  
+    mean_IOI = mean(duration, na.rm = TRUE),
+    IOI_rate = 1 / mean_IOI,  
     .groups = "drop"
   ) 
 head(data5)
 
 #Plotting Temporal Rate
-g2 <- ggplot(data5, aes(x = condition, y = ISI_rate, color = condition)) +
+g2 <- ggplot(data5, aes(x = condition, y = IOI_rate, color = condition)) +
   geom_violin(aes(fill = condition), trim = FALSE, alpha = 0.4, draw_quantiles = 0.5, size = 1.2) +
   geom_line(aes(group = speaker), color = "#0073C2", linetype = "dotdash", alpha = 0.8, size = 1) +
   geom_point(color = "#0073C2", size = 2, na.rm = TRUE) +
