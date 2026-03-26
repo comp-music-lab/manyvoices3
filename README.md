@@ -206,7 +206,8 @@ CI_f0stab <- read_csv("./f0stab_extra_results.csv") %>%
 CI_IOI <- read_csv("./IOI_extra_results.csv") %>%
   mutate(Feature = "IOI Rate")
 ```
-Line 32 **print(CI_data)** is the result including the mean translated Cohen'd that you may use in your paper (specifically "mu_hat"). 
+Line 32 **print(CI_data)** is the result including the mean translated Cohen'd that you may use in your paper (specifically "mu_hat").
+If you want to get the relative effect size "p<sub>re</sub>" and p value, you need to be back to the "_extra_results.csv", and mu_hat refers to the relative effect size. 
 
 ## Inter rater reliability
 Step 1. Randomly choose a participant ID (using a random number generator; for Zixuan Jia to annotate so you can compare her annotations with yours).
