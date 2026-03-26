@@ -111,10 +111,10 @@ LANGCOLORMAP_EXTENDED <- rbind(
 
 gobj <- ggplot(data = world) + theme_set(theme_bw()) +
   geom_sf(fill= "darkolivegreen1") +
-  geom_point(data = langlabel, aes(x = Longitude, y = Latitude, fill = Family),
-             size = 4.0, shape = 21) +
+  geom_point(data = langlabel, aes(x = Longitude, y = Latitude, fill = ColorFlag),
+             size = 3, shape = 21) +
   geom_text(data = langlabel, aes(x=Longitude, y=Latitude, label=ID),
-            size = 2.6, color = "darkblue", check_overlap = FALSE) + 
+            size = 2.3, color = "darkblue", check_overlap = FALSE) + 
   xlab("") + ylab("") + ylim(c(-50.5, 75)) + 
   theme(axis.ticks.x = element_blank(), axis.text.x = element_blank(), legend.title = element_blank(), legend.position = "none") +
   theme(panel.background = element_rect(fill = "aliceblue")) + 
