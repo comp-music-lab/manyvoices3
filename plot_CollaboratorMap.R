@@ -115,7 +115,7 @@ gobj <- ggplot(data = world) + theme_set(theme_bw()) +
 
 ##Change it yo your own outputdir 
 OUTPUTDIR = "/Users/betty/Downloads/"
-ggsave(file = paste(OUTPUTDIR, "CollabMap.png", sep = ""), plot = gobj, width = 8, height = 7， dpi = 600)
+ggsave(file = paste(OUTPUTDIR, "CollabMap.png", sep = ""), plot = gobj, width = 8, height = 7, dpi = 600)
 write.csv(file = paste(OUTPUTDIR, "langlabel.csv", sep = ""), langlabel)
 
 ##
