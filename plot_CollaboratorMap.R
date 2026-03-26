@@ -102,6 +102,13 @@ world <- ne_countries(scale = "medium", returnclass = "sf")
 
 langlabel$ID <- 1:nrow(langlabel)
 
+## Keep only 23 as original color while others as grey. You can change "23" as your ID number for making your own map. 
+langlabel$ColorFlag <- ifelse(langlabel$ID == 23, langlabel$Family, "Other")
+LANGCOLORMAP_EXTENDED <- rbind(
+  LANGCOLORMAP,
+  data.frame(languagefamily = "Other", rgb = "grey95")
+)
+
 gobj <- ggplot(data = world) + theme_set(theme_bw()) +
   geom_sf(fill= "darkolivegreen1") +
   geom_point(data = langlabel, aes(x = Longitude, y = Latitude, fill = Family),
