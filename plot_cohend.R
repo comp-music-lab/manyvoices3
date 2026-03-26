@@ -4,11 +4,12 @@ library(readr)
 library(ggplot2)
 library(gridExtra)
 
-effectsize_f0 <- read_csv("./f0_cohend_results.csv") %>%
+#read raw data files directly from GitHub (replace with other files as needed for other papers)
+effectsize_f0 <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/pitch%20processed%20zero/f0_cohend_results.csv') %>%
   mutate(Feature = "Pitch Height")
-effectsize_f0stab <- read_csv("./f0stab_cohend_results.csv") %>%
+effectsize_f0stab <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/pitch%20processed%20zero/f0stab_cohend_results.csv') %>%
   mutate(Feature = "Pitch Stability")
-effectsize_IOI <- read_csv("./IOI_cohend_results.csv") %>%
+effectsize_IOI <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/IOI/IOI_cohend_results.csv') %>%
   mutate(Feature = "IOI Rate")
 
 combined_data <- bind_rows(effectsize_f0, effectsize_f0stab, effectsize_IOI)
@@ -16,11 +17,11 @@ cohen_data <- combined_data %>%
   select(Feature, Cohens_d)
 print(cohen_data)
 
-CI_f0 <- read_csv("./f0_extra_results.csv") %>%
+CI_f0 <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/pitch%20processed%20zero/f0_extra_results.csv') %>%
   mutate(Feature = "Pitch Height")
-CI_f0stab <- read_csv("./f0stab_extra_results.csv") %>%
+CI_f0stab <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/pitch%20processed%20zero/f0stab_extra_results.csv') %>%
   mutate(Feature = "Pitch Stability")
-CI_IOI <- read_csv("./IOI_extra_results.csv") %>%
+CI_IOI <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/IOI/IOI_extra_results.csv') %>%
   mutate(Feature = "IOI Rate")
 
 combined_data2 <- bind_rows(CI_f0, CI_f0stab, CI_IOI)
