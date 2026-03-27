@@ -15,7 +15,12 @@ Praat: https://www.fon.hum.uva.nl/praat/
 R: https://www.r-project.org/
 Python: https://www.python.org/ 
 Matlab: https://au.mathworks.com/products/matlab.html  
-Note that the key figures from the papers can be reproduced using only R and the provided output data files from the other analysis programs.
+Note that the key figures and results reported in the papers can be reproduced using only R and the provided output data files from the other analysis programs. To easily reproduce all results, clone this GitHub repository to your local computer, replace "/Users/psav050/Documents/GitHub/manyvoices3" in line 5 in !JiaEtAlMV3.R with the directory of this cloned repository and then run the following command in R:
+```R
+setwd('/Users/psav050/Documents/GitHub/manyvoices3')
+source('!JiaEtAlMV3.R')
+```
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6c7f8e7f-5d54-4f4a-a534-a25c06b1ca99" width="400">
@@ -169,29 +174,29 @@ The effect size for computing pitch stability and IOI is calculated in the same 
 All the generated effect size results are dragged to ***data -> effectsize*** folder for future plotting.
 
 ## Plotting acoustic features
-Run **plot_acoustic features.R**, three points need to be modified：
+Run **plot_acoustic features.R**. This will read files and store outputs in the appropriate files on your computer to reproduce Jia et al.'s analysis. To replicate with other datasets, you'll need to change the folders accordingly：
 
 (1) Line 8: Modify the path to the location where the ***pitch processed folder*** is stored on your local computer.
 ```R
-folder_path <- ""/Users/betty/Desktop/manyvoices3_pilot/pitch processed/" " 
+folder_path <- "./JiaEtAl(MandarinAuckland)/Confirmatory analysis/data/pitch processed zero/" #Modify the path to the location where the ***pitch processed folder*** is stored on your local computer
 ```
 （2） Line 93: Modify the path to the location where the ***IOI files*** are stored on your local computer.
 ```R
 # Set the path where the interval file is located
-folder_path2 <- "/Users/betty/Desktop/manyvoices3_pilot/IOI/"
+folder_path2 <- "./JiaEtAl(MandarinAuckland)/Confirmatory analysis/data/IOI/" #Modify the path to the location where the ***IOI files*** are stored on your local computer
 ```
 （3）Line 143: Modify the path to the location where you want to save the images on your local computer.
 ```R
-ggsave("/Users/betty/Desktop/manyvoices3_pilot/figure/combined_plot_acoustic features.png", plot = combined_plot, width = 12, height = 6)
+ggsave("./JiaEtAl(MandarinAuckland)/Confirmatory analysis/figures/combined_plot_acoustic features.png", plot = combined_plot, width = 12, height = 6) #Modify the path to the location where you want to save the images on your local computer
 ```
 ## Plotting effect size
-Run ***plot_cohend.R***, change the file paths from **line 7 to line 23** to the corresponding locations where the files are stored on your local computer.
+Run ***plot_cohend.R***. This will read files and store outputs in the appropriate files on your computer to reproduce Jia et al.'s analysis. To replicate this with new data, make sure you upload the data to GitHub in an appropriate folder and change the file paths from **line 7 to line 23** to the corresponding GitHub URLs where the files are uploaded.
 ```R
-effectsize_f0 <- read_csv("./f0_cohend_results.csv") %>%
+effectsize_f0 <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/pitch%20processed%20zero/f0_cohend_results.csv') %>%
   mutate(Feature = "Pitch Height")
-effectsize_f0stab <- read_csv("./f0stab_cohend_results.csv") %>%
+effectsize_f0stab <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/pitch%20processed%20zero/f0stab_cohend_results.csv') %>%
   mutate(Feature = "Pitch Stability")
-effectsize_IOI <- read_csv("./IOI_cohend_results.csv") %>%
+effectsize_IOI <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/IOI/IOI_cohend_results.csv') %>%
   mutate(Feature = "IOI Rate")
 
 combined_data <- bind_rows(effectsize_f0, effectsize_f0stab, effectsize_IOI)
@@ -199,15 +204,15 @@ cohen_data <- combined_data %>%
   select(Feature, Cohens_d)
 print(cohen_data)
 
-CI_f0 <- read_csv("./f0_extra_results.csv") %>%
+CI_f0 <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/pitch%20processed%20zero/f0_extra_results.csv') %>%
   mutate(Feature = "Pitch Height")
-CI_f0stab <- read_csv("./f0stab_extra_results.csv") %>%
+CI_f0stab <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/pitch%20processed%20zero/f0stab_extra_results.csv') %>%
   mutate(Feature = "Pitch Stability")
-CI_IOI <- read_csv("./IOI_extra_results.csv") %>%
+CI_IOI <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/IOI/IOI_extra_results.csv') %>%
   mutate(Feature = "IOI Rate")
 ```
-Line 32 **print(CI_data)** is the result including the mean translated Cohen'd that you may use in your paper (specifically "mu_hat").
-If you want to get the relative effect size "p<sub>re</sub>" and p value, you need to be back to the "_extra_results.csv", and mu_hat refers to the relative effect size. 
+Line 32 **print(CI_data)** is the result including the mean translated Cohen'd to report in your paper (specifically "mu_hat").
+You'll also need to report the relative effect size "p<sub>re</sub>" and p value, which you can find in the "_extra_results.csv", where "mu_hat"" refers to the relative effect size. 
 
 ## Inter rater reliability
 Step 1. Randomly choose a participant ID (using a random number generator; for Zixuan Jia to annotate so you can compare her annotations with yours).
@@ -237,4 +242,4 @@ out_path = os.path.join(annotator_folder, f"p19_{condition}.csv")
 
 Step 4. Run the **plot_irr.R** to calculate the intraclass correlation
 
-I marked the lines that you need to change, including line 5-6, 8, 12, 15, 28, 54, 63, 65
+This will read files and store outputs in the appropriate files on your computer to reproduce Jia et al.'s analysis. To replicate with other datasets, you'll need to change the folders accordingly, including line 5-6, 8, 12, 15, 28, 54, 63, 65
