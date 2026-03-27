@@ -20,7 +20,7 @@ langlabel <- data.frame(Name = collabT$Name,
                         Family = collabT$LanguageFamily,
                         Longitude = collabT$Longitude,
                         Latitude = collabT$Latitude,
-                        Place = collabT$PlaceName,
+                        Place = collabT$Place,
                         Flag = collabT$Choice,
                         ID = 0)
 
