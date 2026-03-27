@@ -1,9 +1,9 @@
 library(irr)
 library(ggplot2)
 
-# change
-ANNOTATIONDIR_JIA <- "/Users/betty/Desktop/Rater/Jia/"
-ANNOTATIONDIR_SAVAGE <- "/Users/betty/Desktop/Rater/Savage/"
+# change directories (for other collaborators replicating with your own languages/data, replace "SAVAGE"/"Savage" with your last name throughout)
+ANNOTATIONDIR_JIA <- "./JiaEtAl(MandarinAuckland)/Inter-rater reliability/Jia/"
+ANNOTATIONDIR_SAVAGE <- "./JiaEtAl(MandarinAuckland)/Inter-rater reliability/Savage/"
 # change
 DATAID <- c('p19')
 TITLE <- c(conv = "Conversation", sing = "Singing")
@@ -12,7 +12,7 @@ TYPE <- c('conv', 'sing')
 PLOTNAME <- c(Jia = "Jia", Savage = "Savage")
 
 #change
-OUTPUTDIR <- "/Users/betty/Desktop/Rater/"
+OUTPUTDIR <- "./JiaEtAl(MandarinAuckland)/Inter-rater reliability/"
 
 
 icc_result <- data.frame()
@@ -56,7 +56,7 @@ write.table(icc_result, file = paste(OUTPUTDIR, "icc_JIA_SAVAGE.csv", sep = ""),
 
 YL <- c(min(df_dlt$dlt), max(df_dlt$dlt))
 
-# change "Savage" as your name
+# 
 g <- ggplot(df_dlt, aes(x = dataid, y = dlt)) +
   geom_violin(aes(group = dataid), draw_quantiles = 0.5) +
   geom_point(aes(color = dataid)) +
