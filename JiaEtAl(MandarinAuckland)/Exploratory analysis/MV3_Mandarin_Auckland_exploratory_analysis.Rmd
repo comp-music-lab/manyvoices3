@@ -4,7 +4,7 @@ output: html_document
 date: "2025-07-27"
 ---
 ```{r}
-# load nessary library
+# load necessary libraries
 library(tidyverse)
 library(readr)
 library(dplyr)
@@ -17,10 +17,10 @@ library(reshape2)
 
 ```{r}
 # Elicit information relevant to musianship
-music_info <- read_csv("/Users/betty/Desktop/Mandarin real data/Mandarin_song_speech_0520.csv") %>%
+music_info <- read_csv(file="https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Exploratory%20analysis/Mandarin_song_speech_0520.csv") %>%
   dplyr::select(`renumbered ID`, musicianship_self_perceived, musicianship_compliment)
 
-effectsize_f0 <- read_csv("/Users/betty/Desktop/Mandarin real data_group level/pitch processed zero_by participant/f0_cohend_results.csv") %>%
+effectsize_f0 <- read_csv(file='https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Confirmatory%20analysis/data/pitch%20processed%20zero/f0_cohend_results.csv') %>%
   mutate(Feature = "Pitch Height")
 merged_f0 <- effectsize_f0 %>%
   left_join(music_info, by = c("SpeakerID" = "renumbered ID"))
