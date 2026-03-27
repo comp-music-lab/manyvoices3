@@ -10,8 +10,8 @@ library(grid)
 INTERVAL <- 5
 SUBGROUPING <- TRUE
 
-##change it to your own path 
-collabT <- read.csv("/CollaboratorsPlotData.csv")
+##download map data directly from GitHub
+collabT <- read.csv(file="https://github.com/comp-music-lab/manyvoices3/raw/refs/heads/main/CollaboratorsPlotData.csv")
 
 langlabel <- data.frame(Name = collabT$Name,
                         Lang = collabT$ProvidedLanguageName,
@@ -26,9 +26,6 @@ langlabel <- data.frame(Name = collabT$Name,
 
 langlabel <- langlabel[langlabel$Flag == 1, ]
 
-langlabel$Lang[langlabel$Lang == "Hebrew"] <- langlabel$LangAdditional[langlabel$Lang == "Hebrew"]
-langlabel$Lang[langlabel$Lang == "Amami dialect"] <- langlabel$LangAdditional[langlabel$Lang == "Amami dialect"]
-langlabel$Lang[langlabel$Lang == "Arabic"] <- langlabel$LangAdditional[langlabel$Lang == "Arabic"]
 langlabel$Lang[langlabel$Lang == "Persian"] <- langlabel$LangAdditional[langlabel$Lang == "Persian"]
 langlabel$Lang[langlabel$Lang == "Farsi"] <- langlabel$LangAdditional[langlabel$Lang == "Farsi"]
 
@@ -112,16 +109,16 @@ LANGCOLORMAP_EXTENDED <- rbind(
 gobj <- ggplot(data = world) + theme_set(theme_bw()) +
   geom_sf(fill= "darkolivegreen1") +
   geom_point(data = langlabel, aes(x = Longitude, y = Latitude, fill = ColorFlag),
-             size = 3, shape = 21) +
+             size = 4, shape = 21) +
   geom_text(data = langlabel, aes(x=Longitude, y=Latitude, label=ID),
-            size = 2.3, color = "darkblue", check_overlap = FALSE) + 
+            size = 2.5, color = "darkblue", check_overlap = FALSE) + 
   xlab("") + ylab("") + ylim(c(-50.5, 75)) + 
   theme(axis.ticks.x = element_blank(), axis.text.x = element_blank(), legend.title = element_blank(), legend.position = "none") +
   theme(panel.background = element_rect(fill = "aliceblue")) + 
   scale_fill_manual(values = LANGCOLORMAP$rgb, breaks = LANGCOLORMAP$languagefamily)
 
-##Change it your own output directory 
-OUTPUTDIR = "/Users/betty/Downloads/"
+##Change to your new output directory if you are creating a map for a new Stage 2 publication 
+OUTPUTDIR = "./JiaEtAl(MandarinAuckland)/Confirmatory analysis/figures/"
 ggsave(file = paste(OUTPUTDIR, "CollabMap.png", sep = ""), plot = gobj, width = 8, height = 7, dpi = 600)
 write.csv(file = paste(OUTPUTDIR, "langlabel.csv", sep = ""), langlabel)
 
