@@ -40,8 +40,8 @@ g1 <- ggplot(data2, aes(x = condition, y = f0_cent, color = condition)) +
     fill = "Condition",
     color = "Condition"
   ) +
-  scale_fill_manual(values = c("sing" = "#FBEDE3", "conv" = "#EFF7E8")) +
-  scale_color_manual(values = c("sing" = "#EF7F29", "conv" = "#198E5C")) + 
+  scale_fill_manual(values = c("sing" = "#FFA500", "conv" = "#4CAF50")) +  
+  scale_color_manual(values = c("sing" = "#FF7F0E", "conv" = "#2E8B57")) +
   guides(
     fill = "none",  
     color = guide_legend(override.aes = list(size = 3))  
@@ -74,8 +74,8 @@ g3 <- ggplot(data3, aes(x = condition, y = mean_f0stab, color = condition)) +
     fill = "Condition",
     color = "Condition"
   ) +
-  scale_fill_manual(values = c("sing" = "#FBEDE3", "conv" = "#EFF7E8")) +
-  scale_color_manual(values = c("sing" = "#EF7F29", "conv" = "#198E5C")) + 
+  scale_fill_manual(values = c("sing" = "#FFA500", "conv" = "#4CAF50")) +  
+  scale_color_manual(values = c("sing" = "#FF7F0E", "conv" = "#2E8B57")) +
   guides(
     fill = "none",   
     color = guide_legend(override.aes = list(size = 3))  
@@ -125,13 +125,14 @@ g2 <- ggplot(data5, aes(x = condition, y = IOI_rate, color = condition)) +
     fill = "Condition",
     color = "Condition"
   ) +
-  scale_fill_manual(values = c("sing" = "#FBEDE3", "conv" = "#EFF7E8")) +
-  scale_color_manual(values = c("sing" = "#EF7F29", "conv" = "#198E5C")) + 
+  scale_fill_manual(values = c("sing" = "#FFA500", "conv" = "#4CAF50")) +  
+  scale_color_manual(values = c("sing" = "#FF7F0E", "conv" = "#2E8B57")) +
   guides(
     fill = "none",   
     color = guide_legend(override.aes = list(size = 3))  
   ) +
   scale_x_discrete(labels = c("sing" = "singing", "conv" = "conversation"), limits = c("sing", "conv")) +
+  scale_y_continuous(breaks = seq(0, 10, by = 3), limits = c(0, 10))+
   theme(
     plot.title = element_text(size = 10, face = "bold", hjust = 0.5),
     axis.text.y = element_text(size = 8),
