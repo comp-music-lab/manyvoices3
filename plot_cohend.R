@@ -58,3 +58,4 @@ g <- g +
   geom_point(data = CI_data, aes(x = mu_hat, y = Feature), shape = 23, size = 3, fill = "#d7003a", position = position_nudge(y = 0.25), show.legend = FALSE)
 
 print(g)
+ggsave("./JiaEtAl(MandarinAuckland)/Confirmatory analysis/figures/plot_cohend.png", plot = g) #Modify the path to the location where you want to save the images on your local computer
