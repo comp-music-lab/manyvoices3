@@ -17,7 +17,7 @@ Praat: https://www.fon.hum.uva.nl/praat/
 R: https://www.r-project.org/
 Python: https://www.python.org/ 
 Matlab: https://au.mathworks.com/products/matlab.html  
-Note that the key figures and results reported in the papers can be reproduced using only R and the provided output data files from the other analysis programs. To easily reproduce all results, clone this GitHub repository to your local computer, replace "/Users/psav050/Documents/GitHub/manyvoices3" in line 5 in !JiaEtAlMV3.R with the directory of this cloned repository and then run the following command in R:
+Note that the key figures and results reported in the papers can be reproduced using only R and the provided output data files from the other analysis programs. To easily reproduce all results, clone this GitHub repository to your local computer, replace "/Users/psav050/Documents/GitHub/manyvoices3" in line 5 in !JiaEtAlMV3.R with the directory of this cloned repository and then run the following command in R (making sure you are running R version 4.4.1 or higher):
 ```R
 setwd('/Users/psav050/Documents/GitHub/manyvoices3')
 source('!JiaEtAlMV3.R')
