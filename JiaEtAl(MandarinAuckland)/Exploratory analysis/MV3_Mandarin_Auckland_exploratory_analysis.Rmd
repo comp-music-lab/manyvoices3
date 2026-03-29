@@ -74,6 +74,7 @@ p1 <- ggplot(merged_all, aes(x = Cohens_d, y = musicianship_self_perceived, colo
     data = cor_labels,
     aes(x = x, y = y, label = label, color = Feature, hjust = hjust),
     inherit.aes = FALSE,
+    show.legend =FALSE,
     size = 5
   ) +
   labs(
@@ -91,7 +92,7 @@ cor_stats %>%
     r = round(r, 2),
     p = ifelse(p < .001, "< .001", round(p, 3))
   )
-ggsave("/Users/betty/Desktop/Mandarin real data/figure/musicianship_self_perceived.png", width = 8, height = 6, dpi = 300)
+ggsave("./JiaEtAl(MandarinAuckland)/Exploratory analysis/figures/musicianship_self_perceived.png", width = 8, height = 6, dpi = 300)
 
 ```
 
@@ -127,6 +128,7 @@ p2 <- ggplot(merged_all, aes(x = Cohens_d, y = musicianship_compliment, color = 
     data = cor_labels,
     aes(x = x, y = y, label = label, color = Feature, hjust = hjust),
     inherit.aes = FALSE,
+    show.legend =FALSE,
     size = 5
   ) +
   labs(
@@ -149,12 +151,12 @@ combined_plot <- p1_no_legend | p2
 
 combined_plot
 
-ggsave("/Users/betty/Desktop/Mandarin real data_group level/figure/musicianship_cohend_plots.png", combined_plot, width = 12, height = 6, dpi = 300)
+ggsave("./JiaEtAl(MandarinAuckland)/Exploratory analysis/figures/musicianship_cohend_plots.png", combined_plot, width = 12, height = 6, dpi = 300)
 ```
 
 ```{r}
 #plot bar chart showing the distribution of musicianship-related variables
-data <- read.csv("/Users/betty/Desktop/Mandarin real data/Mandarin_song_speech_0520.csv")
+data <- read_csv(file="https://raw.githubusercontent.com/comp-music-lab/manyvoices3/refs/heads/main/JiaEtAl(MandarinAuckland)/Exploratory%20analysis/Mandarin_song_speech_0520.csv")
 cols <- c("know_song",
           "musicianship_self_perceived",
           "musicianship_compliment",
@@ -222,7 +224,7 @@ p <- ggplot(summary_df, aes(x = Measure, y = Mean, fill = Measure)) +
 
 show(p)
 
-ggsave("/Users/betty/Desktop/Mandarin real data_group level/figure/musicianship_summary_barplot.png",
+ggsave("./JiaEtAl(MandarinAuckland)/Exploratory analysis/figures/musicianship_summary_barplot.png",
        plot = p, width = 6, height = 4, units = "in", dpi = 300)
 
 ```

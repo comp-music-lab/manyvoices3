@@ -5,7 +5,7 @@
 setwd('/Users/psav050/Documents/GitHub/manyvoices3')#NB: You need to set this to your own local working directory to reproduce the analysis
 
 #Install and load packages
-packages <- c('tidyverse','dplyr','readr','ggplot2','gridExtra','irr')
+packages <- c('tidyverse','dplyr','readr','ggplot2','gridExtra','irr','ggpubr','patchwork','reshape2')
 
 if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
   install.packages(setdiff(packages, rownames(installed.packages())))  
@@ -17,6 +17,9 @@ library(readr)
 library(ggplot2)
 library(gridExtra)
 library(irr)
+library(ggpubr)
+library(patchwork)
+library(reshape2)
 
 source('plot_acoustic features.R')
 source('plot_cohend.R')
