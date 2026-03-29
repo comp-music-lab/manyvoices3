@@ -29,9 +29,9 @@ head(data2)
 g1 <- ggplot(data2, aes(x = condition, y = f0_cent, color = condition)) +
   geom_violin(aes(fill = condition), trim = FALSE, alpha = 0.4, draw_quantiles = 0.5, size = 1.2) +
   # Add lines between the same speaker
-  geom_line(aes(group = speaker), color = "#0073C2", linetype = "dotdash", alpha = 0.8, size = 1) +
+  geom_line(aes(group = speaker), color = "grey30", linetype = "dotdash", alpha = 0.8, size = 0.8) +
   # Add points
-  geom_point(color = "#0073C2", size = 2, na.rm = TRUE) +
+  geom_point(color = "#2B2B2B", size = 1.6, na.rm = TRUE) +
   theme_minimal() +
   labs(
     title = "Pitch Height",
@@ -64,8 +64,8 @@ head(data3)
 
 g3 <- ggplot(data3, aes(x = condition, y = mean_f0stab, color = condition)) +
   geom_violin(aes(fill = condition), trim = FALSE, alpha = 0.4, draw_quantiles = 0.5, size = 1.2) +
-  geom_line(aes(group = speaker), color = "#0073C2", linetype = "dotdash", alpha = 0.8, size = 1) +
-  geom_point(color = "#0073C2", size = 2, na.rm = TRUE) +
+  geom_line(aes(group = speaker), color = "grey30", linetype = "dotdash", alpha = 0.8, size = 0.8) +
+  geom_point(color = "#2B2B2B", size = 1.6, na.rm = TRUE) +
   theme_minimal() +
   labs(
     title = "Pitch Stability",
@@ -115,8 +115,8 @@ head(data5)
 #Plotting Temporal Rate
 g2 <- ggplot(data5, aes(x = condition, y = IOI_rate, color = condition)) +
   geom_violin(aes(fill = condition), trim = FALSE, alpha = 0.4, draw_quantiles = 0.5, size = 1.2) +
-  geom_line(aes(group = speaker), color = "#0073C2", linetype = "dotdash", alpha = 0.8, size = 1) +
-  geom_point(color = "#0073C2", size = 2, na.rm = TRUE) +
+  geom_line(aes(group = speaker), color = "grey30", linetype = "dotdash", alpha = 0.8, size = 0.8) +
+  geom_point(color = "#2B2B2B", size = 1.6, na.rm = TRUE) +
   theme_minimal() +
   labs(
     title = "Temporal rate",
