@@ -33,7 +33,7 @@ source('!JiaEtAlMV3.R')
 
 
 ## 📰 News
-**- 2026 Mar ??.** Our first full (Stage 2) journal article (analysing Mandarin speakers from Auckland) will be published in Peer Community Journal! (https://doi.org/10.24072/pcjournal.698)
+**- 2026 Apr 1.** Our first full (Stage 2) journal article (analysing Mandarin speakers from Auckland) will be published in Peer Community Journal! (https://doi.org/10.24072/pcjournal.698)
 
 **- 2026 Feb 13.** Our Registered Report analysing Mandarin speakers from Auckland completed Stage 2 peer review and was recommended for publication! (https://doi.org/10.24072/pci.rr.101216)
 
