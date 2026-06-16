@@ -4,7 +4,7 @@ This directory contains data and analysis scripts associated with Chiba et al.'s
 
 ## Directory structure
 
-```text
+
 ChibaEtAl(Japanese)
 ├── !ChibaEtAlMV3.R
 ├── Confirmatory analysis/
@@ -19,7 +19,7 @@ ChibaEtAl(Japanese)
 ├── plot_cohend(chiba).R
 ├── plot_CollaboratorMap(chiba).R
 └── plot_irr(chiba).R
-```
+
 
 ## Contents
 
@@ -64,46 +64,36 @@ Output figures generated from the analysis scripts.
 
 Run:
 
-```r
 plot_acoustic features(chiba).R
-```
+
 
 Output:
 
-```text
 Confirmatory analysis/figures/combined_plot_acoustic features.png
-```
+
 
 ### Effect sizes
 
 Run the MATLAB scripts in:
 
-```text
 Confirmatory analysis/data/IOI3++
 Confirmatory analysis/data/pitch processed4
-```
 
 Then run:
 
-```r
 plot_cohend(chiba).R
-```
 
 ### Collaborator map
 
 Run:
 
-```r
 plot_CollaboratorMap(chiba).R
-```
 
 ### Inter-rater reliability
 
 Run:
 
-```r
 plot_irr(chiba).R
-```
 
 ## Notes
 
