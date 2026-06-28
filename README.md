@@ -23,11 +23,10 @@ setwd('/Users/psav050/Documents/GitHub/manyvoices3')
 source('!JiaEtAlMV3.R')
 ```
 
+<img width="1840" height="994" alt="image" src="https://github.com/user-attachments/assets/2bf8391b-b584-42bb-8a69-ea382bdcb8a1" />
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6c7f8e7f-5d54-4f4a-a534-a25c06b1ca99" width="400">
-  <br>
-  <em>Figure by Nelson Shi</em>
+  <img width="1840" height="994" alt="image" src="https://github.com/user-attachments/assets/2bf8391b-b584-42bb-8a69-ea382bdcb8a1" />
 </p>
 
 
