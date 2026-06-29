@@ -4,7 +4,7 @@
 % method to obtain the derivation of f0.
 % Define folder path
 input_folder = './pitch delete zero/';
-output_folder = './pitch processed/';
+output_folder = './pitch processed zero/';
 
 % Ensure the output folder exists
 if ~exist(output_folder, 'dir')
