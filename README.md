@@ -24,7 +24,7 @@ source('!JiaEtAlMV3.R')
 ```
 
 <p align="center">
-  <img width="1840" height="994" alt="image" src="https://github.com/user-attachments/assets/2bf8391b-b584-42bb-8a69-ea382bdcb8a1" />
+  <img width="1836" height="994" alt="28581782714085_ pic" src="https://github.com/user-attachments/assets/eb4cae87-dd7a-47a1-9e8a-8a1e3a89e042" />
 </p>
 
 
