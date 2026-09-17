@@ -33,7 +33,7 @@ def process_txt(input_txt, output_folder):
     df["speaker"] = df["IntervalName"].astype(int)
 
     def assign_gender(speaker_id):
-        male_speakers = {2, 4, 6, 7, 10, 11, 19}  # Modify this set if needed
+        male_speakers = {2, 4, 6, 7, 10, 11, 19}  # Modify this set if needed; Leave this as empty if no male speakers in your study
         return "Male" if speaker_id in male_speakers else "Female"
 
     df["gender"] = df["speaker"].apply(assign_gender)
