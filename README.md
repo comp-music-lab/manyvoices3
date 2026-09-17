@@ -70,6 +70,7 @@ The annotation is divided into two tiers:
 An example of the annotation is shown below in Praat.
 ![image](https://github.com/user-attachments/assets/89a0fed2-93cc-4eb1-a57e-edb631fd6ee8)
 
+Note. If a participant produced fewer than 10 units, please remove that participant's annotations from your TextGrid, as there's no need to process their data at all.
 
 ## Time interval elicitation
 You can find this Praat script in the repository under:
