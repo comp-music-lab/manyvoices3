@@ -1,4 +1,4 @@
-Group naming conventions:
-- C: conversation-first \
-- R: recitation-first \
-- S: singing-first}
+Group naming conventions (middle letter):
+- C: conversation-first
+- R: recitation-first
+- S: singing-first
