@@ -1,0 +1,340 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 151.476 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "syllable" 
+        xmin = 0 
+        xmax = 151.476 
+        intervals: size = 63 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.757 
+            text = "" 
+        intervals [2]:
+            xmin = 1.757 
+            xmax = 2.009 
+            text = "cięż" 
+        intervals [3]:
+            xmin = 2.009 
+            xmax = 2.161 
+            text = "ko" 
+        intervals [4]:
+            xmin = 2.161 
+            xmax = 2.201 
+            text = "" 
+        intervals [5]:
+            xmin = 2.201 
+            xmax = 2.346 
+            text = "bo" 
+        intervals [6]:
+            xmin = 2.346 
+            xmax = 2.367 
+            text = "" 
+        intervals [7]:
+            xmin = 2.367 
+            xmax = 2.547 
+            text = "w su" 
+        intervals [8]:
+            xmin = 2.547 
+            xmax = 2.78 
+            text = "mie" 
+        intervals [9]:
+            xmin = 2.78 
+            xmax = 3.704 
+            text = "" 
+        intervals [10]:
+            xmin = 3.704 
+            xmax = 3.863 
+            text = "cie" 
+        intervals [11]:
+            xmin = 3.863 
+            xmax = 4.019 
+            text = "ka" 
+        intervals [12]:
+            xmin = 4.019 
+            xmax = 4.179 
+            text = "we" 
+        intervals [13]:
+            xmin = 4.179 
+            xmax = 4.853 
+            text = "" 
+        intervals [14]:
+            xmin = 4.853 
+            xmax = 4.949 
+            text = "ty" 
+        intervals [15]:
+            xmin = 4.949 
+            xmax = 5.037 
+            text = "le" 
+        intervals [16]:
+            xmin = 5.037 
+            xmax = 5.242 
+            text = "prze" 
+        intervals [17]:
+            xmin = 5.242 
+            xmax = 5.496 
+            text = "żyć" 
+        intervals [18]:
+            xmin = 5.496 
+            xmax = 32.195 
+            text = "" 
+        intervals [19]:
+            xmin = 32.195 
+            xmax = 32.453 
+            text = "przez" 
+        intervals [20]:
+            xmin = 32.453 
+            xmax = 32.609 
+            text = "to" 
+        intervals [21]:
+            xmin = 32.609 
+            xmax = 32.833 
+            text = "że" 
+        intervals [22]:
+            xmin = 32.833 
+            xmax = 32.979 
+            text = "wła" 
+        intervals [23]:
+            xmin = 32.979 
+            xmax = 33.278 
+            text = "śnie" 
+        intervals [24]:
+            xmin = 33.278 
+            xmax = 33.377 
+            text = "" 
+        intervals [25]:
+            xmin = 33.377 
+            xmax = 33.551 
+            text = "wie" 
+        intervals [26]:
+            xmin = 33.551 
+            xmax = 33.656 
+            text = "my" 
+        intervals [27]:
+            xmin = 33.656 
+            xmax = 33.793 
+            text = "o" 
+        intervals [28]:
+            xmin = 33.793 
+            xmax = 33.936 
+            text = "tym" 
+        intervals [29]:
+            xmin = 33.936 
+            xmax = 34.196 
+            text = "że" 
+        intervals [30]:
+            xmin = 34.196 
+            xmax = 35.046 
+            text = "" 
+        intervals [31]:
+            xmin = 35.046 
+            xmax = 35.155 
+            text = "na" 
+        intervals [32]:
+            xmin = 35.155 
+            xmax = 35.37 
+            text = "sze" 
+        intervals [33]:
+            xmin = 35.37 
+            xmax = 35.496 
+            text = "ży" 
+        intervals [34]:
+            xmin = 35.496 
+            xmax = 35.615 
+            text = "cie" 
+        intervals [35]:
+            xmin = 35.615 
+            xmax = 42.382 
+            text = "" 
+        intervals [36]:
+            xmin = 42.382 
+            xmax = 42.503 
+            text = "że" 
+        intervals [37]:
+            xmin = 42.503 
+            xmax = 42.578 
+            text = "by" 
+        intervals [38]:
+            xmin = 42.578 
+            xmax = 42.803 
+            text = "sko" 
+        intervals [39]:
+            xmin = 42.803 
+            xmax = 42.919 
+            text = "rzy" 
+        intervals [40]:
+            xmin = 42.919 
+            xmax = 43.034 
+            text = "stać" 
+        intervals [41]:
+            xmin = 43.034 
+            xmax = 43.055 
+            text = "" 
+        intervals [42]:
+            xmin = 43.055 
+            xmax = 43.182 
+            text = "a" 
+        intervals [43]:
+            xmin = 43.182 
+            xmax = 43.317 
+            text = "la" 
+        intervals [44]:
+            xmin = 43.317 
+            xmax = 43.427 
+            text = "ta" 
+        intervals [45]:
+            xmin = 43.427 
+            xmax = 43.541 
+            text = "nie" 
+        intervals [46]:
+            xmin = 43.541 
+            xmax = 43.674 
+            text = "co" 
+        intervals [47]:
+            xmin = 43.674 
+            xmax = 43.793 
+            text = "ci" 
+        intervals [48]:
+            xmin = 43.793 
+            xmax = 43.938 
+            text = "po" 
+        intervals [49]:
+            xmin = 43.938 
+            xmax = 89.026 
+            text = "" 
+        intervals [50]:
+            xmin = 89.026 
+            xmax = 89.091 
+            text = "i" 
+        intervals [51]:
+            xmin = 89.091 
+            xmax = 89.206 
+            text = "wy" 
+        intervals [52]:
+            xmin = 89.206 
+            xmax = 89.321 
+            text = "ko" 
+        intervals [53]:
+            xmin = 89.321 
+            xmax = 89.442 
+            text = "rzy" 
+        intervals [54]:
+            xmin = 89.442 
+            xmax = 89.643 
+            text = "sta" 
+        intervals [55]:
+            xmin = 89.643 
+            xmax = 89.77 
+            text = "nia" 
+        intervals [56]:
+            xmin = 89.77 
+            xmax = 89.957 
+            text = "swo" 
+        intervals [57]:
+            xmin = 89.957 
+            xmax = 90.068 
+            text = "je" 
+        intervals [58]:
+            xmin = 90.068 
+            xmax = 90.307 
+            text = "go" 
+        intervals [59]:
+            xmin = 90.307 
+            xmax = 90.358 
+            text = "" 
+        intervals [60]:
+            xmin = 90.358 
+            xmax = 90.54 
+            text = "ży" 
+        intervals [61]:
+            xmin = 90.54 
+            xmax = 90.683 
+            text = "cia" 
+        intervals [62]:
+            xmin = 90.683 
+            xmax = 90.902 
+            text = "tak" 
+        intervals [63]:
+            xmin = 90.902 
+            xmax = 151.476 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "speaker" 
+        xmin = 0 
+        xmax = 151.476 
+        intervals: size = 17 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.757 
+            text = "" 
+        intervals [2]:
+            xmin = 1.757 
+            xmax = 2.78 
+            text = "1" 
+        intervals [3]:
+            xmin = 2.78 
+            xmax = 3.704 
+            text = "" 
+        intervals [4]:
+            xmin = 3.704 
+            xmax = 4.179 
+            text = "1" 
+        intervals [5]:
+            xmin = 4.179 
+            xmax = 4.853 
+            text = "" 
+        intervals [6]:
+            xmin = 4.853 
+            xmax = 5.496 
+            text = "1" 
+        intervals [7]:
+            xmin = 5.496 
+            xmax = 32.195 
+            text = "" 
+        intervals [8]:
+            xmin = 32.195 
+            xmax = 33.278 
+            text = "4" 
+        intervals [9]:
+            xmin = 33.278 
+            xmax = 33.377 
+            text = "" 
+        intervals [10]:
+            xmin = 33.377 
+            xmax = 34.196 
+            text = "4" 
+        intervals [11]:
+            xmin = 34.196 
+            xmax = 35.046 
+            text = "" 
+        intervals [12]:
+            xmin = 35.046 
+            xmax = 35.615 
+            text = "4" 
+        intervals [13]:
+            xmin = 35.615 
+            xmax = 42.382 
+            text = "" 
+        intervals [14]:
+            xmin = 42.382 
+            xmax = 43.938 
+            text = "6" 
+        intervals [15]:
+            xmin = 43.938 
+            xmax = 89.026 
+            text = "" 
+        intervals [16]:
+            xmin = 89.026 
+            xmax = 90.902 
+            text = "7" 
+        intervals [17]:
+            xmin = 90.902 
+            xmax = 151.476 
+            text = "" 

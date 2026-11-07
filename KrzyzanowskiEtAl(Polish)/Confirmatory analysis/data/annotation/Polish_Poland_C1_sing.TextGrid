@@ -1,0 +1,716 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 153.83175 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "note" 
+        xmin = 0 
+        xmax = 153.83175 
+        intervals: size = 136 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3676634049828646 
+            text = "" 
+        intervals [2]:
+            xmin = 1.3676634049828646 
+            xmax = 2.1539205224304268 
+            text = "sto" 
+        intervals [3]:
+            xmin = 2.1539205224304268 
+            xmax = 2.6598598849619015 
+            text = "lat" 
+        intervals [4]:
+            xmin = 2.6598598849619015 
+            xmax = 2.8239483268640013 
+            text = "" 
+        intervals [5]:
+            xmin = 2.8239483268640013 
+            xmax = 3.3914208551087635 
+            text = "sto" 
+        intervals [6]:
+            xmin = 3.3914208551087635 
+            xmax = 3.753782830975901 
+            text = "lat" 
+        intervals [7]:
+            xmin = 3.753782830975901 
+            xmax = 4.122981825255626 
+            text = "" 
+        intervals [8]:
+            xmin = 4.122981825255626 
+            xmax = 4.854542795402488 
+            text = "niech" 
+        intervals [9]:
+            xmin = 4.854542795402488 
+            xmax = 5.1280235319059875 
+            text = "ży" 
+        intervals [10]:
+            xmin = 5.1280235319059875 
+            xmax = 5.442526378885012 
+            text = "je" 
+        intervals [11]:
+            xmin = 5.442526378885012 
+            xmax = 5.85 
+            text = "ży" 
+        intervals [12]:
+            xmin = 5.85 
+            xmax = 6.15 
+            text = "je" 
+        intervals [13]:
+            xmin = 6.15 
+            xmax = 6.8577891902906245 
+            text = "nam" 
+        intervals [14]:
+            xmin = 6.8577891902906245 
+            xmax = 7.62360056850921 
+            text = "" 
+        intervals [15]:
+            xmin = 7.62360056850921 
+            xmax = 8.297491514089305 
+            text = "sto" 
+        intervals [16]:
+            xmin = 8.297491514089305 
+            xmax = 8.751228410494283 
+            text = "lat" 
+        intervals [17]:
+            xmin = 8.751228410494283 
+            xmax = 9.081808149303624 
+            text = "" 
+        intervals [18]:
+            xmin = 9.081808149303624 
+            xmax = 9.717039804270591 
+            text = "sto" 
+        intervals [19]:
+            xmin = 9.717039804270591 
+            xmax = 10.118921055372143 
+            text = "lat" 
+        intervals [20]:
+            xmin = 10.118921055372143 
+            xmax = 10.304273458790043 
+            text = "" 
+        intervals [21]:
+            xmin = 10.304273458790043 
+            xmax = 10.920059246768226 
+            text = "niech" 
+        intervals [22]:
+            xmin = 10.920059246768226 
+            xmax = 11.218229207262926 
+            text = "ży" 
+        intervals [23]:
+            xmin = 11.218229207262926 
+            xmax = 11.529363079083481 
+            text = "je" 
+        intervals [24]:
+            xmin = 11.529363079083481 
+            xmax = 11.801605216926468 
+            text = "ży" 
+        intervals [25]:
+            xmin = 11.801605216926468 
+            xmax = 12.0155097538031 
+            text = "je" 
+        intervals [26]:
+            xmin = 12.0155097538031 
+            xmax = 12.670187275758854 
+            text = "nam" 
+        intervals [27]:
+            xmin = 12.670187275758854 
+            xmax = 12.916501590950126 
+            text = "" 
+        intervals [28]:
+            xmin = 12.916501590950126 
+            xmax = 13.072068526860406 
+            text = "je" 
+        intervals [29]:
+            xmin = 13.072068526860406 
+            xmax = 13.261940130033441 
+            text = "" 
+        intervals [30]:
+            xmin = 13.261940130033441 
+            xmax = 13.471934775586334 
+            text = "szcze" 
+        intervals [31]:
+            xmin = 13.471934775586334 
+            xmax = 13.599578579745936 
+            text = "" 
+        intervals [32]:
+            xmin = 13.599578579745936 
+            xmax = 13.793103057020168 
+            text = "raz" 
+        intervals [33]:
+            xmin = 13.793103057020168 
+            xmax = 14.015450328782055 
+            text = "" 
+        intervals [34]:
+            xmin = 14.015450328782055 
+            xmax = 14.254267768822599 
+            text = "jesz" 
+        intervals [35]:
+            xmin = 14.254267768822599 
+            xmax = 14.381911572982201 
+            text = "" 
+        intervals [36]:
+            xmin = 14.381911572982201 
+            xmax = 14.60837638681375 
+            text = "cze" 
+        intervals [37]:
+            xmin = 14.60837638681375 
+            xmax = 14.940756258982189 
+            text = "raz" 
+        intervals [38]:
+            xmin = 14.940756258982189 
+            xmax = 15.056047436932795 
+            text = "" 
+        intervals [39]:
+            xmin = 15.056047436932795 
+            xmax = 15.525447232874555 
+            text = "niech" 
+        intervals [40]:
+            xmin = 15.525447232874555 
+            xmax = 15.747794504636442 
+            text = "ży" 
+        intervals [41]:
+            xmin = 15.747794504636442 
+            xmax = 15.912496187423024 
+            text = "je" 
+        intervals [42]:
+            xmin = 15.912496187423024 
+            xmax = 16.031904907443295 
+            text = "" 
+        intervals [43]:
+            xmin = 16.031904907443295 
+            xmax = 16.237782010926523 
+            text = "ży" 
+        intervals [44]:
+            xmin = 16.237782010926523 
+            xmax = 16.51777487166371 
+            text = "je" 
+        intervals [45]:
+            xmin = 16.51777487166371 
+            xmax = 17.164794463318703 
+            text = "nam" 
+        intervals [46]:
+            xmin = 17.164794463318703 
+            xmax = 17.211 
+            text = "" 
+        intervals [47]:
+            xmin = 17.211 
+            xmax = 17.866 
+            text = "niech" 
+        intervals [48]:
+            xmin = 17.866 
+            xmax = 18.381 
+            text = "ży" 
+        intervals [49]:
+            xmin = 18.381 
+            xmax = 18.744 
+            text = "je" 
+        intervals [50]:
+            xmin = 18.744 
+            xmax = 19.325 
+            text = "nam" 
+        intervals [51]:
+            xmin = 19.325 
+            xmax = 20.187 
+            text = "" 
+        intervals [52]:
+            xmin = 20.187 
+            xmax = 20.535 
+            text = "sto" 
+        intervals [53]:
+            xmin = 20.535 
+            xmax = 20.725 
+            text = "lat" 
+        intervals [54]:
+            xmin = 20.725 
+            xmax = 21.002 
+            text = "sto" 
+        intervals [55]:
+            xmin = 21.002 
+            xmax = 21.206 
+            text = "lat" 
+        intervals [56]:
+            xmin = 21.206 
+            xmax = 21.493 
+            text = "sto" 
+        intervals [57]:
+            xmin = 21.493 
+            xmax = 21.639 
+            text = "lat" 
+        intervals [58]:
+            xmin = 21.639 
+            xmax = 21.948 
+            text = "sto" 
+        intervals [59]:
+            xmin = 21.948 
+            xmax = 22.226 
+            text = "lat" 
+        intervals [60]:
+            xmin = 22.226 
+            xmax = 22.41 
+            text = "" 
+        intervals [61]:
+            xmin = 22.41 
+            xmax = 22.639 
+            text = "nie" 
+        intervals [62]:
+            xmin = 22.639 
+            xmax = 22.879 
+            text = "chaj" 
+        intervals [63]:
+            xmin = 22.879 
+            xmax = 23.196 
+            text = "ży" 
+        intervals [64]:
+            xmin = 23.196 
+            xmax = 23.413 
+            text = "je" 
+        intervals [65]:
+            xmin = 23.413 
+            xmax = 23.886 
+            text = "nam" 
+        intervals [66]:
+            xmin = 23.886 
+            xmax = 24.294 
+            text = "" 
+        intervals [67]:
+            xmin = 24.294 
+            xmax = 24.754 
+            text = "sto" 
+        intervals [68]:
+            xmin = 24.754 
+            xmax = 24.894 
+            text = "lat" 
+        intervals [69]:
+            xmin = 24.894 
+            xmax = 25.235 
+            text = "sto" 
+        intervals [70]:
+            xmin = 25.235 
+            xmax = 25.396 
+            text = "lat" 
+        intervals [71]:
+            xmin = 25.396 
+            xmax = 25.711 
+            text = "sto" 
+        intervals [72]:
+            xmin = 25.711 
+            xmax = 25.875 
+            text = "lat" 
+        intervals [73]:
+            xmin = 25.875 
+            xmax = 26.237 
+            text = "sto" 
+        intervals [74]:
+            xmin = 26.237 
+            xmax = 26.473 
+            text = "lat" 
+        intervals [75]:
+            xmin = 26.473 
+            xmax = 26.507 
+            text = "" 
+        intervals [76]:
+            xmin = 26.507 
+            xmax = 26.697 
+            text = "nie" 
+        intervals [77]:
+            xmin = 26.697 
+            xmax = 26.924 
+            text = "chaj" 
+        intervals [78]:
+            xmin = 26.924 
+            xmax = 27.229 
+            text = "ży" 
+        intervals [79]:
+            xmin = 27.229 
+            xmax = 27.407 
+            text = "je" 
+        intervals [80]:
+            xmin = 27.407 
+            xmax = 27.969 
+            text = "nam" 
+        intervals [81]:
+            xmin = 27.969 
+            xmax = 28.285 
+            text = "" 
+        intervals [82]:
+            xmin = 28.285 
+            xmax = 28.694 
+            text = "niech" 
+        intervals [83]:
+            xmin = 28.694 
+            xmax = 28.918 
+            text = "ży" 
+        intervals [84]:
+            xmin = 28.918 
+            xmax = 29.174 
+            text = "je" 
+        intervals [85]:
+            xmin = 29.174 
+            xmax = 29.676 
+            text = "nam" 
+        intervals [86]:
+            xmin = 29.676 
+            xmax = 29.908 
+            text = "" 
+        intervals [87]:
+            xmin = 29.908 
+            xmax = 30.309 
+            text = "niech" 
+        intervals [88]:
+            xmin = 30.309 
+            xmax = 30.569 
+            text = "ży" 
+        intervals [89]:
+            xmin = 30.569 
+            xmax = 30.774 
+            text = "je" 
+        intervals [90]:
+            xmin = 30.774 
+            xmax = 31.27 
+            text = "nam" 
+        intervals [91]:
+            xmin = 31.27 
+            xmax = 31.501 
+            text = "" 
+        intervals [92]:
+            xmin = 31.501 
+            xmax = 31.833 
+            text = "w zdro" 
+        intervals [93]:
+            xmin = 31.833 
+            xmax = 31.942 
+            text = "wiu" 
+        intervals [94]:
+            xmin = 31.942 
+            xmax = 32.214 
+            text = "szczę" 
+        intervals [95]:
+            xmin = 32.214 
+            xmax = 32.533 
+            text = "ściu" 
+        intervals [96]:
+            xmin = 32.533 
+            xmax = 32.701 
+            text = "po" 
+        intervals [97]:
+            xmin = 32.701 
+            xmax = 32.902 
+            text = "myśl" 
+        intervals [98]:
+            xmin = 32.902 
+            xmax = 33.125 
+            text = "no" 
+        intervals [99]:
+            xmin = 33.125 
+            xmax = 33.458 
+            text = "ści" 
+        intervals [100]:
+            xmin = 33.458 
+            xmax = 33.689 
+            text = "nie" 
+        intervals [101]:
+            xmin = 33.689 
+            xmax = 33.899 
+            text = "chaj" 
+        intervals [102]:
+            xmin = 33.899 
+            xmax = 34.186 
+            text = "ży" 
+        intervals [103]:
+            xmin = 34.186 
+            xmax = 34.375 
+            text = "je" 
+        intervals [104]:
+            xmin = 34.375 
+            xmax = 34.854 
+            text = "nam" 
+        intervals [105]:
+            xmin = 34.854 
+            xmax = 35.329 
+            text = "" 
+        intervals [106]:
+            xmin = 35.329 
+            xmax = 35.705 
+            text = "jesz" 
+        intervals [107]:
+            xmin = 35.705 
+            xmax = 35.88 
+            text = "cze" 
+        intervals [108]:
+            xmin = 35.88 
+            xmax = 36.015 
+            text = "je" 
+        intervals [109]:
+            xmin = 36.015 
+            xmax = 36.283 
+            text = "den" 
+        intervals [110]:
+            xmin = 36.283 
+            xmax = 36.485 
+            text = "i" 
+        intervals [111]:
+            xmin = 36.485 
+            xmax = 36.731 
+            text = "jesz" 
+        intervals [112]:
+            xmin = 36.731 
+            xmax = 36.912 
+            text = "cze" 
+        intervals [113]:
+            xmin = 36.912 
+            xmax = 37.269 
+            text = "raz" 
+        intervals [114]:
+            xmin = 37.269 
+            xmax = 37.377 
+            text = "" 
+        intervals [115]:
+            xmin = 37.377 
+            xmax = 38.001 
+            text = "sto" 
+        intervals [116]:
+            xmin = 38.001 
+            xmax = 38.163 
+            text = "lat" 
+        intervals [117]:
+            xmin = 38.163 
+            xmax = 38.524 
+            text = "sto" 
+        intervals [118]:
+            xmin = 38.524 
+            xmax = 38.77474525970298 
+            text = "lat" 
+        intervals [119]:
+            xmin = 38.77474525970298 
+            xmax = 39.029 
+            text = "niech" 
+        intervals [120]:
+            xmin = 39.029 
+            xmax = 39.511 
+            text = "ży" 
+        intervals [121]:
+            xmin = 39.511 
+            xmax = 39.801 
+            text = "je" 
+        intervals [122]:
+            xmin = 39.801 
+            xmax = 40.216 
+            text = "nam" 
+        intervals [123]:
+            xmin = 40.216 
+            xmax = 40.45 
+            text = "" 
+        intervals [124]:
+            xmin = 40.45 
+            xmax = 41.281 
+            text = "sto" 
+        intervals [125]:
+            xmin = 41.281 
+            xmax = 41.847 
+            text = "lat" 
+        intervals [126]:
+            xmin = 41.847 
+            xmax = 42.621 
+            text = "sto" 
+        intervals [127]:
+            xmin = 42.621 
+            xmax = 43.102 
+            text = "lat" 
+        intervals [128]:
+            xmin = 43.102 
+            xmax = 43.313 
+            text = "" 
+        intervals [129]:
+            xmin = 43.313 
+            xmax = 43.642 
+            text = "sto" 
+        intervals [130]:
+            xmin = 43.642 
+            xmax = 43.868 
+            text = "lat" 
+        intervals [131]:
+            xmin = 43.868 
+            xmax = 43.897 
+            text = "" 
+        intervals [132]:
+            xmin = 43.897 
+            xmax = 44.077 
+            text = "niech" 
+        intervals [133]:
+            xmin = 44.077 
+            xmax = 44.501 
+            text = "ży" 
+        intervals [134]:
+            xmin = 44.501 
+            xmax = 44.778 
+            text = "je" 
+        intervals [135]:
+            xmin = 44.778 
+            xmax = 45.162 
+            text = "nam" 
+        intervals [136]:
+            xmin = 45.162 
+            xmax = 153.83175 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "speaker" 
+        xmin = 0 
+        xmax = 153.83175 
+        intervals: size = 38 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3676634049828646 
+            text = "" 
+        intervals [2]:
+            xmin = 1.3676634049828646 
+            xmax = 3.753782830975901 
+            text = "1" 
+        intervals [3]:
+            xmin = 3.753782830975901 
+            xmax = 4.122981825255626 
+            text = "" 
+        intervals [4]:
+            xmin = 4.122981825255626 
+            xmax = 6.8577891902906245 
+            text = "2" 
+        intervals [5]:
+            xmin = 6.8577891902906245 
+            xmax = 7.62360056850921 
+            text = "" 
+        intervals [6]:
+            xmin = 7.62360056850921 
+            xmax = 10.118921055372143 
+            text = "3" 
+        intervals [7]:
+            xmin = 10.118921055372143 
+            xmax = 10.304273458790043 
+            text = "" 
+        intervals [8]:
+            xmin = 10.304273458790043 
+            xmax = 12.670187275758854 
+            text = "4" 
+        intervals [9]:
+            xmin = 12.670187275758854 
+            xmax = 12.916501590950126 
+            text = "" 
+        intervals [10]:
+            xmin = 12.916501590950126 
+            xmax = 14.940756258982189 
+            text = "5" 
+        intervals [11]:
+            xmin = 14.940756258982189 
+            xmax = 15.056047436932795 
+            text = "" 
+        intervals [12]:
+            xmin = 15.056047436932795 
+            xmax = 17.164794463318703 
+            text = "6" 
+        intervals [13]:
+            xmin = 17.164794463318703 
+            xmax = 17.211 
+            text = "" 
+        intervals [14]:
+            xmin = 17.211 
+            xmax = 19.325 
+            text = "7" 
+        intervals [15]:
+            xmin = 19.325 
+            xmax = 20.187 
+            text = "" 
+        intervals [16]:
+            xmin = 20.187 
+            xmax = 22.226 
+            text = "1" 
+        intervals [17]:
+            xmin = 22.226 
+            xmax = 22.41 
+            text = "" 
+        intervals [18]:
+            xmin = 22.41 
+            xmax = 23.886 
+            text = "2" 
+        intervals [19]:
+            xmin = 23.886 
+            xmax = 24.294 
+            text = "" 
+        intervals [20]:
+            xmin = 24.294 
+            xmax = 26.473 
+            text = "3" 
+        intervals [21]:
+            xmin = 26.473 
+            xmax = 26.507 
+            text = "" 
+        intervals [22]:
+            xmin = 26.507 
+            xmax = 27.969 
+            text = "4" 
+        intervals [23]:
+            xmin = 27.969 
+            xmax = 28.285 
+            text = "" 
+        intervals [24]:
+            xmin = 28.285 
+            xmax = 29.676 
+            text = "5" 
+        intervals [25]:
+            xmin = 29.676 
+            xmax = 29.908 
+            text = "" 
+        intervals [26]:
+            xmin = 29.908 
+            xmax = 31.27 
+            text = "6" 
+        intervals [27]:
+            xmin = 31.27 
+            xmax = 31.501 
+            text = "" 
+        intervals [28]:
+            xmin = 31.501 
+            xmax = 33.458 
+            text = "7" 
+        intervals [29]:
+            xmin = 33.458 
+            xmax = 34.854 
+            text = "1" 
+        intervals [30]:
+            xmin = 34.854 
+            xmax = 35.329 
+            text = "" 
+        intervals [31]:
+            xmin = 35.329 
+            xmax = 37.269 
+            text = "2" 
+        intervals [32]:
+            xmin = 37.269 
+            xmax = 37.377 
+            text = "" 
+        intervals [33]:
+            xmin = 37.377 
+            xmax = 40.216 
+            text = "3" 
+        intervals [34]:
+            xmin = 40.216 
+            xmax = 40.45 
+            text = "" 
+        intervals [35]:
+            xmin = 40.45 
+            xmax = 43.102 
+            text = "4" 
+        intervals [36]:
+            xmin = 43.102 
+            xmax = 43.313 
+            text = "" 
+        intervals [37]:
+            xmin = 43.313 
+            xmax = 45.162 
+            text = "5" 
+        intervals [38]:
+            xmin = 45.162 
+            xmax = 153.83175 
+            text = "" 
